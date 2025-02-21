@@ -32,17 +32,15 @@ nav a:hover {
 /* Main content area */
 .content {
     padding: 20px;
-   
 }
 
 h1 {
     font-size: 2.5em;
     text-align: center;
-    
 }
 
 h2 {
-    font-family: 'Arial', sans-serif; /* Corrected the syntax here */
+    font-family: 'Arial', sans-serif;
     text-align: left;
     font-size: 23px;
     font-weight: bold;
@@ -50,12 +48,41 @@ h2 {
     margin-left: 100px;
 }
 
-
 .p2 {
-    font-family: 'Verdana', sans-serif; /* Corrected the syntax here */
+    font-family: 'Verdana', sans-serif;
     text-align: left;
     font-size: 26px;
     font-weight: bolder;
     margin-top: 5px;
     margin-left: 100px;
+}
+
+/* Typing effect styling */
+.typing-effect {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white; /* Cursor effect */
+    padding-right: 5px;
+    animation: typing 5s steps(43) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 23.5ch; /* Adjust this based on the full length of the name */
+    }
+}
+
+/* Cursor blinking animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
