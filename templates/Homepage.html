@@ -10,7 +10,9 @@
     <!-- Navbar -->
     <nav>
         <a href="#">Home</a> 
-        <a href="#">About</a>
+        <a href="#" id="aboutBtn">About</a>
+        <a href="#">Skills</a>
+        <a href="#" id="Workbutton">Work Experience</a>
         <a href="#">Projects</a>
         <a href="#">Contact</a>
     </nav>
@@ -29,8 +31,66 @@
             </p>
             <img src="../static/images/intropic.jpg" alt="Description of the image" class="right-image">
         </div>
-        
-
     </div>
+      
+
+        <!-- About Modal (Only Education Section) -->
+<div id="aboutModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="educationSection" class="modal-section">
+            <h3>Education</h3>
+            <ul class="modal-list">
+                <li>
+                    <strong class="Edu-title">Tertiary:</strong>
+                    <p>Bachelor of Science in Computer Engineering (2021 – 2024)</p>
+                    <p>STI Lipa Colleges</p>
+                </li>
+                <li>
+                    <p>Bachelor of Science in Architecture (2020 – 2021)</p>
+                    <p>University of Batangas</p>
+                </li>
+                <li>
+                    <strong class="Edu-title">Secondary Level:</strong>
+                    <p>UBLC Senior High School (2018 – 2020)</p>
+                    <p>University of Batangas</p>
+                </li>
+                <li>
+                    <strong class="Edu-title">Seminars:</strong>
+                    <p>Life Skills for Personal and Professional Development (2024 – 2025)</p>
+                    <p>Technology / IT</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+  <!--Work Exp Modal (Only Education Section) -->
+  <div id="Workexpmodal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="WorkSection" class="modal-section">
+            <h3>Work Experience</h3>
+            <ul class="modal-list">
+                <li>
+                    <p class="work-item">Log House Farm Resort (2020 – 2022)</p>
+                    <p class="work-item2">Customer Service (Part Time)</p>
+                </li>
+                <li>
+                    <p class="work-item">Golden Achers Corporation - McDonald's (February 2022-2023)</p>
+                    <p class="work-item2">Service Crew (Working Student) </p>
+                </li>
+                <li>
+                    <p class="work-item">Project Fit PH - (January 2024-December 2024)</p>
+                    <p class="work-item2">Health Data Analyst (Part Time)</p>
+                </li>
+                
+           
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <script src="/static/modal.js"></script>
 </body>
 </html>
