@@ -1,32 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // About Modal
-    const aboutBtn = document.getElementById("aboutBtn");
-    const aboutModal = document.getElementById("aboutModal");
-    const closeButtons = document.querySelectorAll(".close");
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+    const educationSection = document.getElementById('education');
 
-    aboutBtn.addEventListener("click", function () {
-        aboutModal.style.display = "flex";
-    });
+    function revealOnScroll() {
+        scrollRevealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
 
-    // Work Experience Modal
-    const workBtn = document.getElementById("Workbutton");
-    const workModal = document.getElementById("Workexpmodal");
-
-    workBtn.addEventListener("click", function () {
-        workModal.style.display = "flex";
-    });
-
-    // Close modals when clicking the close button
-    closeButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            this.closest(".modal").style.display = "none";
+            if (elementTop < windowHeight - 100) {
+                element.classList.add('active');
+            }
         });
-    });
 
-    // Close modals when clicking outside the modal content
-    window.addEventListener("click", function (event) {
-        if (event.target.classList.contains("modal")) {
-            event.target.style.display = "none";
+        const educationTop = educationSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (educationTop < windowHeight - 100) {
+            educationSection.classList.add('active');
         }
-    });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
 });

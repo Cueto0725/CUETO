@@ -4,93 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUETO PORTFOLIO</title>
-    <link rel="stylesheet" href="/static/cueto.css"> <!-- Link to the external CSS file --> 
+    <link rel="stylesheet" href="/static/main.css">
+    <link rel="stylesheet" href="/static/educ.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav>
         <a href="#">Home</a> 
-        <a href="#" id="aboutBtn">About</a>
+        <a href="#about">About</a>
         <a href="#">Skills</a>
-        <a href="#" id="Workbutton">Work Experience</a>
+        <a href="#">Work Experience</a>
         <a href="#">Projects</a>
         <a href="#">Contact</a>
+        <a href="#education">Education</a>
     </nav>
 
-    <!-- Main content -->
     <div class="content">
         <h1>Welcome to My Portfolio</h1>
-        <p class= "quote">In the middle of difficulty lies opportunity</p>
+        <p class="quote">In the middle of difficulty lies opportunity</p>
         <h3>COMPUTER ENGINEER</h3>
         <h2>Hello, I'm</h2>
-        <!-- Apply the typing effect here -->
         <p class="p2 typing-effect">Jean Claude Leonard C. Cueto</p>
-        <div class="three-rows">
+        <div class="three-rows scroll-reveal">
             <p>
                 Hi, I'm Jean Claude, a recent graduate in computer engineering with a passion for both software and hardware development. I'm particularly interested in software development, data analysis, and networking. My journey in computer engineering has provided me with a strong foundation in problem-solving, coding, and system design. I am eager to contribute my skills and continue learning in a dynamic, collaborative environment.
             </p>
             <img src="../static/images/intropic.jpg" alt="Description of the image" class="right-image">
         </div>
     </div>
-      
 
-        <!-- About Modal (Only Education Section) -->
-<div id="aboutModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div id="educationSection" class="modal-section">
-            <h3>Education</h3>
-            <ul class="modal-list">
-                <li>
-                    <strong class="Edu-title">Tertiary:</strong>
-                    <p>Bachelor of Science in Computer Engineering (2021 – 2024)</p>
-                    <p>STI Lipa Colleges</p>
-                </li>
-                <li>
-                    <p>Bachelor of Science in Architecture (2020 – 2021)</p>
-                    <p>University of Batangas</p>
-                </li>
-                <li>
-                    <strong class="Edu-title">Secondary Level:</strong>
-                    <p>UBLC Senior High School (2018 – 2020)</p>
-                    <p>University of Batangas</p>
-                </li>
-                <li>
-                    <strong class="Edu-title">Seminars:</strong>
-                    <p>Life Skills for Personal and Professional Development (2024 – 2025)</p>
-                    <p>Technology / IT</p>
-                </li>
-            </ul>
+    <section id="education">
+        <h2 class="section-title education-title-adjust">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item scroll-reveal">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>STI Lipa Colleges</h3>
+                    <span class="timeline-date1">2021 - 2025</span>
+                    <p class="computer-engineering-paragraph">Bachelor of Science in Computer Engineering</p>
+                </div>
+            </div>
+            <div class="timeline-item scroll-reveal">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>University of Batangas</h3>
+                    <span class="timeline-date">2020 - 2021</span>
+                    <p>Bachelor of Science in Architecture</p>
+                </div>
+            </div>
+            <div class="timeline-item scroll-reveal">
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <h3>UBLC Senior High School</h3>
+                    <span class="timeline-date1">2018 - 2020</span>
+                    <p class="stem-strand-paragraph">STEM Strand</p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 
-  <!--Work Exp Modal (Only Education Section) -->
-  <div id="Workexpmodal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div id="WorkSection" class="modal-section">
-            <h3>Work Experience</h3>
-            <ul class="modal-list">
-                <li>
-                    <p class="work-item">Log House Farm Resort (2020 – 2022)</p>
-                    <p class="work-item2">Customer Service (Part Time)</p>
-                </li>
-                <li>
-                    <p class="work-item">Golden Achers Corporation - McDonald's (February 2022-2023)</p>
-                    <p class="work-item2">Service Crew (Working Student) </p>
-                </li>
-                <li>
-                    <p class="work-item">Project Fit PH - (January 2024-December 2024)</p>
-                    <p class="work-item2">Health Data Analyst (Part Time)</p>
-                </li>
-                
-           
-            </ul>
-        </div>
-    </div>
-</div>
-
-        <script src="/static/modal.js"></script>
+    <script src="/static/modal.js"></script>
 </body>
 </html>
