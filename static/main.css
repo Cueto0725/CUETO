@@ -5,15 +5,58 @@ body {
     font-family: Arial, sans-serif;
     background-color: #000000; /* Dark gray background */
     color: white;
+   
 }
 
+page-content {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+}
+
+
+/* Keyframes for typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 23.5ch; /* Adjust this based on the full length of the name */
+    }
+}
+
+/* Cursor blinking animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
 /* Navbar styling */
 nav {
-    background-color: #21212158; /* White navbar */
+    position: sticky; /* Make it sticky */
+    top: 0;           /* Stick to the top */
+    width: 100%;       /* Full width */
+    background-color: #21212158; /* White navbar with transparency */
     padding: 10px 20px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for better visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;      /* Ensure it's above other content */
 }
+
 
 nav a {
     color: #e7e7e7; /* Dark gray text for the links */
@@ -41,7 +84,7 @@ h1 {
 
 .quote {
     font-style: italic;
-    color: #6a6a6a; /* Soft gray color for the quote */
+    color: #979797; /* Soft gray color for the quote */
     font-size: 1em; /* Adjust this size to make it visually appealing */
     text-align: center; /* Center align the quote */
     margin-top: -35px; /* Add some space between the heading and quote */
@@ -92,26 +135,6 @@ h3 {
     padding-right: 5px;
     animation: typing 5s steps(43) 1s forwards, blink 0.75s step-end infinite;
 }
-
-
-
-/* Keyframes for typing animation */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 23.5ch; /* Adjust this based on the full length of the name */
-    }
-}
-
-/* Cursor blinking animation */
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
 
 /* Sections with Modern Layout */
 .three-rows {
@@ -177,7 +200,7 @@ h3 {
     font-size: 2em; /* Example: Change font size */
     color: #ffffff; /* Example: Change color */
     margin-bottom: 10px; /* Example: Adjust bottom margin */
-    margin-top: 50px;
+    margin-top: 60px;
 }
 .timeline {
     position: relative;
@@ -217,7 +240,7 @@ h3 {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: #e0e0e0;
+    background-color: #a3a3a3;
     border-radius: 50%;
     top: 10px;
     z-index: 1;
@@ -232,7 +255,7 @@ h3 {
 }
 
 .timeline-content {
-    background-color: #282828;
+    background-color: #212121;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -262,7 +285,7 @@ h3 {
 .timeline-content h3 {
     margin: 0 0 5px;
     font-size: 1.3em;
-    color: #fff;
+    color: #ffffff;
     text-shadow: none; /* remove 3d effect */
     margin-left: 0; /* remove left margin from previous styles */
     margin-bottom: 0px; /* Adjust spacing */
@@ -283,23 +306,21 @@ h3 {
     text-align:left;
 }
 
-
 .stem-strand-paragraph {
     /* Add your custom styles here */
     text-align: left;
-    margin-left: 25px;
 }
 
 .computer-engineering-paragraph {
-    /* Add your custom styles here */
     text-align: left; /* Example: Align to the left */
 }
 
 .timeline-content p {
     font-size: 1em;
-    color: #d0d0d0;
+    color: #b4ff05;
     margin: 0;
 }
+
 
 .scroll-reveal {
     opacity: 0;
@@ -312,15 +333,63 @@ h3 {
     transform: translateY(0);
 }
 
-/* educ.css */
-
-/* ... (Your existing educ.css) ... */
-
-#education {
-    transition: opacity 0.8s ease;
-    opacity: 0;
+.skills-section {
+    padding: 50px 20px;
+    background-color: #1a1a1a;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-#education.active {
-    opacity: 1;
+.skills-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
+
+.skills-intro {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+    text-indent: 2em;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-item1, .skill-item {
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+  }
+  
+  .skill-item1 { /*HTML*/
+    background-color: #E34F26;
+    color: white;
+  }
+  
+  .skill-item:nth-child(2) { /*CSS*/
+    background-color: #1572B6;
+    color: white;
+  }
+  
+  .skill-item:nth-child(3) { /*Javascript*/
+    background-color: #F7DF1E;
+    color: black;
+  }
+  
+  .skill-item:nth-child(4) { /*MySQL*/
+    background-color: #043861;
+    color: white;
+  }
+  
+  .skill-item:nth-child(n+5) { /*all other skills*/
+      background-color: #008080;
+      color: white;
+  }
