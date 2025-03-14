@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
     const educationSection = document.getElementById('education');
+    const skillsSection = document.getElementById('skills');
 
     function revealOnScroll() {
         scrollRevealElements.forEach(element => {
@@ -14,52 +15,75 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        const educationTop = educationSection.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+        if (educationSection) {
+            const educationTop = educationSection.getBoundingClientRect().top;
 
-        if (educationTop < windowHeight - 100) {
-            educationSection.classList.add('active');
-        } else {
-            educationSection.classList.remove('active');
+            if (educationTop < window.innerHeight - 100) {
+                educationSection.classList.add('active');
+            } else {
+                educationSection.classList.remove('active');
+            }
         }
     }
 
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll();
 
-    // Home link click handler
     const homeLink = document.querySelector('nav a[href="#Home"]');
     if (homeLink) {
         homeLink.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default anchor behavior
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
-    // Clear anchor from URL after initial scroll
-    if (window.location.hash) {
-        setTimeout(function() {
-            window.history.replaceState({}, document.title, window.location.pathname);
-        }, 100); // Small delay to allow initial scroll
+    const skillsLink = document.querySelector('nav a[href="#skills"]');
+    if (skillsLink) {
+        skillsLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (skillsSection) {
+                const skillsTop = skillsSection.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                const scrollToPosition = skillsTop + window.scrollY - (windowHeight / 2) + (skillsSection.offsetHeight / 2) + 70;
+                window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
+            }
+        });
     }
-});
 
-// FOR HORIZONTAL SCROLLBAR 
-document.addEventListener('DOMContentLoaded', function() {
-    // ... your existing scrollReveal, home link click handler, and clear anchor code ...
+    function resetToHome() {
+        setTimeout(() => {
+            history.replaceState(null, null, ' ');
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }, 10);
+    }
 
-    // Function to toggle horizontal scrollbar based on orientation
+    // Ensure redirection to Home section on load
+    window.addEventListener('load', function() {
+        resetToHome();
+    });
+
     function toggleHorizontalScrollbar() {
         if (window.matchMedia("(orientation: landscape)").matches) {
             document.body.style.overflowX = 'hidden';
         } else {
-            document.body.style.overflowX = 'auto'; // Or 'visible'
+            document.body.style.overflowX = 'auto';
         }
     }
 
-    // Initial check on page load
     toggleHorizontalScrollbar();
-
-    // Listen for orientation changes
     window.addEventListener('orientationchange', toggleHorizontalScrollbar);
+
+    // Ensure pressing Enter reloads and redirects to Home
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            resetToHome();
+            location.reload();
+        }
+    });
+
+    // Force Home section on refresh
+    window.addEventListener('beforeunload', function() {
+        resetToHome();
+    });
 });

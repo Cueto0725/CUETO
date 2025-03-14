@@ -355,21 +355,21 @@ h3 {
     text-indent: 2em;
 }
 
-.skills-list {
+.Programming-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.skill-item1, .skill-item {
+.skill-PL1, .skill-item {
     padding: 5px 10px;
     margin: 5px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
     display: inline-block;
   }
   
-  .skill-item1 { /*HTML*/
+  .skill-PL1 { /*HTML*/
     background-color: #E34F26;
     color: white;
   }
@@ -393,3 +393,47 @@ h3 {
       background-color: #008080;
       color: white;
   }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-list span {
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+    color: rgb(251, 251, 251); /* Default text color */
+}
+
+.skill1 {
+    background-color: #4CAF50;
+}
+
+.skill2 {
+    background-color: #2196F3;
+}
+
+.skill3 {
+    background-color: #FF9800;
+    color: black; /* Orange often looks better with black text */
+}
+
+.skill4 {
+    background-color: #9C27B0;
+}
+
+.skill5 {
+    background-color: #607D8B;
+}
+
+.skill6 {
+    background-color: #A1887F;
+}
+
+.skill7 {
+    background-color: #00BCD4;
+}
