@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (projectReveal) {
             const revealTop = projectReveal.getBoundingClientRect().top;
-            const revealPoint = 150; 
+            const revealPoint = 150;
 
             if (revealTop < window.innerHeight - revealPoint) {
                 projectReveal.classList.add("active");
@@ -108,6 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeBtn = document.querySelector(".close-btn");
     const emailForm = document.getElementById("emailForm");
 
+    // **Crucial Addition: Initially Hide the Modal**
+    modal.style.display = "none";
+
     // Open Modal when Email Icon is Clicked
     emailIcon.addEventListener("click", function () {
         modal.style.display = "flex";
@@ -128,14 +131,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Handle Form Submission
     emailForm.addEventListener("submit", function (event) {
         event.preventDefault();
-        
+
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const message = document.getElementById("message").value;
-        
+
         // Send Email using "mailto"
         window.location.href = `mailto:jeanclaudeleonard.cueto@gmail.com?subject=Message from ${name}&body=${message}%0D%0A%0D%0AFrom: ${email}`;
-        
+
         modal.style.display = "none"; // Close Modal
         emailForm.reset(); // Clear Form Fields
     });
