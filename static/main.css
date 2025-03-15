@@ -8,6 +8,52 @@ body {
    
 }
 
+.social-icons {
+    position: relative;
+    bottom: 120px;  /* Adjust distance from the bottom */
+    left: 100px;   /* Adjust distance from the right */
+}
+
+
+.social-icons a {
+    color: white; /* Adjust color as needed */
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #6f00ff; /* Example: LinkedIn color */
+}
+
+.email-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.email-icon::after {
+    content: attr(data-email);
+    position: absolute;
+    bottom: -30px;
+    left: 50px;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.email-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 page-content {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
@@ -128,7 +174,7 @@ h3 {
     display: inline-block;
     font-size: 2rem;
     font-weight: bold;
-    color: #fff;
+    color: #a6ff00;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid white; /* Cursor effect */
@@ -202,6 +248,41 @@ h3 {
     margin-bottom: 10px; /* Example: Adjust bottom margin */
     margin-top: 60px;
 }
+
+
+#work {
+    padding: 50px 20px;
+    background-color: #000000; /* Slightly lighter dark background for contrast */
+}
+
+/* Condition for adjusting only the Education section title */
+.section-title.work-title-adjust {
+    /* Add your custom adjustments here */
+    text-align: left; /* Example: Align to the left */
+    margin-left: 100px; /* Example: Adjust left margin */
+    font-size: 2em; /* Example: Change font size */
+    color: #ffffff; /* Example: Change color */
+    margin-bottom: 10px; /* Example: Adjust bottom margin */
+    margin-top: 60px;
+}
+
+
+#project {
+    padding: 50px 20px;
+    background-color: #000000; /* Slightly lighter dark background for contrast */
+}
+
+/* Condition for adjusting only the Education section title */
+.section-title.project-title-adjust {
+    /* Add your custom adjustments here */
+    text-align: left; /* Example: Align to the left */
+    margin-left: 100px; /* Example: Adjust left margin */
+    font-size: 2em; /* Example: Change font size */
+    color: #ffffff; /* Example: Change color */
+    margin-bottom: 10px; /* Example: Adjust bottom margin */
+    margin-top: 60px;
+}
+
 .timeline {
     position: relative;
     max-width: 800px;
@@ -240,7 +321,7 @@ h3 {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: #a3a3a3;
+    background-color: #7c7c7c;
     border-radius: 50%;
     top: 10px;
     z-index: 1;
@@ -306,12 +387,12 @@ h3 {
     text-align:left;
 }
 
-.stem-strand-paragraph {
+.info1{
     /* Add your custom styles here */
     text-align: left;
 }
 
-.computer-engineering-paragraph {
+.info2 {
     text-align: left; /* Example: Align to the left */
 }
 
@@ -319,6 +400,125 @@ h3 {
     font-size: 1em;
     color: #b4ff05;
     margin: 0;
+}
+
+.timeline-right {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.timeline-right::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #444;
+    top: 0;
+    bottom: 0;
+    left: 0; /* Line positioned at the left */
+    margin-left: -1px;
+}
+
+.timeline-right-item {
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%; /* Full width for better positioning */
+    padding-left: 50px; /* Space for the line and icon */
+}
+
+.timeline-right-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #7c7c7c;
+    border-radius: 50%;
+    top: 10px;
+    left: -10px; /* Icon positioned on the left */
+    z-index: 1;
+}
+
+.timeline-right-content {
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-left: -10px; /* Shift content to the right */
+}
+
+.timeline-right-content::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #282828 transparent transparent;
+}
+
+.timeline-right-content h3 {
+    margin: 0 0 5px;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-shadow: none;
+    text-align: center; /* Keep text centered */
+    padding-left: 50px; /* Indent effect */
+    display: inline-block; /* Allows text-indent while keeping center alignment */
+    max-width: 80%; /* Prevents text from stretching too far */
+}
+
+
+.timeline-right-date {
+    display: block;
+    font-size: 0.9em;
+    color: #a0a0a0;
+    margin-bottom: 0;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    
+}
+
+.info-right {
+    text-align: left;
+    text-indent: 50px;
+    color: #b4ff05;
+}
+
+.info-right1 {
+    text-align: left;
+    padding: 5px 20px; /* Reduce top and bottom padding */
+    color: white;
+    margin-bottom: 5px; /* Reduce space between Key Features and the list */
+}
+
+.timeline-right-content p {
+    font-size: 1em;
+    margin: 0 0 5px 0; /* Reduce bottom margin to minimize spacing */
+}
+
+.features-list {
+    list-style: none; /* Removes default bullets */
+    padding-left: 20px; /* Ensure list aligns properly */
+    margin-top: 0; /* Prevent unnecessary top spacing */
+}
+
+
+.features-list li {
+    margin-bottom: 10px; /* Adds spacing between items */
+    font-weight:normal; /* Makes the text bolder */
+    color: white; /* Ensures text is white */
+}
+
+.timeline-project-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.timeline-project-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -436,4 +636,68 @@ h3 {
 
 .skill7 {
     background-color: #00BCD4;
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #222;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #ffcc00;
+}
+
+/* Input & Textarea */
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    background: #333;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Submit Button */
+.modal-content button {
+    width: 100%;
+    padding: 8px;
+    background: #ffcc00;
+    color: #222;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background: #fff;
+    color: #222;
 }
