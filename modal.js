@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 document.addEventListener("DOMContentLoaded", function () {
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
     const educationSection = document.getElementById('education');
@@ -35,15 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
             if (revealTop < window.innerHeight - revealPoint) {
                 projectReveal.classList.add("active");
             } else {
-                projectReveal.classList.remove("active"); // Remove when scrolling up
+                projectReveal.classList.remove("active");
             }
         }
     }
 
     window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Call it once to check initial visibility
+    revealOnScroll();
 
-    // Smooth scroll for Home link
     const homeLink = document.querySelector('nav a[href="#Home"]');
     if (homeLink) {
         homeLink.addEventListener('click', function(event) {
@@ -52,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Smooth scroll for Skills section
     const skillsLink = document.querySelector('nav a[href="#skills"]');
     if (skillsLink) {
         skillsLink.addEventListener('click', function(event) {
@@ -73,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 10);
     }
 
-    // Ensure redirection to Home section on load
     window.addEventListener('load', function() {
         resetToHome();
     });
@@ -89,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleHorizontalScrollbar();
     window.addEventListener('orientationchange', toggleHorizontalScrollbar);
 
-    // Ensure pressing Enter reloads and redirects to Home
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
@@ -98,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Force Home section on refresh
     window.addEventListener('beforeunload', function() {
         resetToHome();
     });
@@ -110,39 +103,40 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeBtn = document.querySelector(".close-btn");
     const emailForm = document.getElementById("emailForm");
 
-    // **Crucial Addition: Initially Hide the Modal**
-    modal.style.display = "none";
+    if (modal) {
+        modal.style.display = "none"; // Ensure the modal is hidden on load
+    }
 
-    // Open Modal when Email Icon is Clicked
-    emailIcon.addEventListener("click", function () {
-        modal.style.display = "flex";
-    });
+    if (emailIcon) {
+        emailIcon.addEventListener("click", function () {
+            modal.style.display = "flex";
+        });
+    }
 
-    // Close Modal when Close Button is Clicked
-    closeBtn.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
+    if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+    }
 
-    // Close Modal when Clicking Outside of It
     window.addEventListener("click", function (event) {
         if (event.target === modal) {
             modal.style.display = "none";
         }
     });
 
-    // Handle Form Submission
-    emailForm.addEventListener("submit", function (event) {
-        event.preventDefault();
+    if (emailForm) {
+        emailForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
 
-        // Send Email using "mailto"
-        window.location.href = `mailto:jeanclaudeleonard.cueto@gmail.com?subject=Message from ${name}&body=${message}%0D%0A%0D%0AFrom: ${email}`;
+            window.location.href = `mailto:jeanclaudeleonard.cueto@gmail.com?subject=Message from ${name}&body=${message}%0D%0A%0D%0AFrom: ${email}`;
 
-        modal.style.display = "none"; // Close Modal
-        emailForm.reset(); // Clear Form Fields
-    });
+            modal.style.display = "none";
+            emailForm.reset();
+        });
+    }
 });
->>>>>>> parent of fd37966 (g)
