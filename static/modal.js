@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of abb3170 (Delete static directory)
 document.addEventListener("DOMContentLoaded", function () {
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
     const educationSection = document.getElementById('education');
@@ -35,15 +38,24 @@ document.addEventListener("DOMContentLoaded", function () {
             if (revealTop < window.innerHeight - revealPoint) {
                 projectReveal.classList.add("active");
             } else {
+<<<<<<< HEAD
                 projectReveal.classList.remove("active"); // Remove when scrolling up
+=======
+                projectReveal.classList.remove("active");
+>>>>>>> parent of abb3170 (Delete static directory)
             }
         }
     }
 
     window.addEventListener("scroll", revealOnScroll);
+<<<<<<< HEAD
     revealOnScroll(); // Call it once to check initial visibility
 
     // Smooth scroll for Home link
+=======
+    revealOnScroll();
+
+>>>>>>> parent of abb3170 (Delete static directory)
     const homeLink = document.querySelector('nav a[href="#Home"]');
     if (homeLink) {
         homeLink.addEventListener('click', function(event) {
@@ -52,7 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+<<<<<<< HEAD
     // Smooth scroll for Skills section
+=======
+>>>>>>> parent of abb3170 (Delete static directory)
     const skillsLink = document.querySelector('nav a[href="#skills"]');
     if (skillsLink) {
         skillsLink.addEventListener('click', function(event) {
@@ -73,7 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 10);
     }
 
+<<<<<<< HEAD
     // Ensure redirection to Home section on load
+=======
+>>>>>>> parent of abb3170 (Delete static directory)
     window.addEventListener('load', function() {
         resetToHome();
     });
@@ -89,7 +107,10 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleHorizontalScrollbar();
     window.addEventListener('orientationchange', toggleHorizontalScrollbar);
 
+<<<<<<< HEAD
     // Ensure pressing Enter reloads and redirects to Home
+=======
+>>>>>>> parent of abb3170 (Delete static directory)
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
@@ -98,12 +119,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+<<<<<<< HEAD
     // Force Home section on refresh
+=======
+>>>>>>> parent of abb3170 (Delete static directory)
     window.addEventListener('beforeunload', function() {
         resetToHome();
     });
 });
 
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("emailModal");
     const emailIcon = document.querySelector(".email-icon");
@@ -146,3 +171,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 >>>>>>> parent of fd37966 (g)
+=======
+>>>>>>> parent of abb3170 (Delete static directory)
