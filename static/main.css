@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-@ -1,703 +0,0 @@
-=======
->>>>>>> parent of abb3170 (Delete static directory)
+
 /* General body styling */
 body {
     margin: 0;
@@ -511,7 +508,7 @@ h3 {
 .features-list li {
     margin-bottom: 10px; /* Adds spacing between items */
     font-weight:normal; /* Makes the text bolder */
-    color: white; /* Ensures text is white */
+    color: rgb(225, 225, 225); /* Ensures text is white */
 }
 
 .timeline-project-reveal {
@@ -704,8 +701,4 @@ h3 {
 .modal-content button:hover {
     background: #fff;
     color: #222;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> parent of abb3170 (Delete static directory)
