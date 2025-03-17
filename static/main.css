@@ -11,8 +11,8 @@ body {
 
 .social-icons {
     position: relative;
-    bottom: 120px;  /* Adjust distance from the bottom */
-    left: 100px;   /* Adjust distance from the right */
+    bottom: 130px;  /* Adjust distance from the bottom */
+    right: 265px;   /* Adjust distance from the right */
 }
 
 
