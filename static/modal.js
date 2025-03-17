@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of abb3170 (Delete static directory)
 document.addEventListener("DOMContentLoaded", function () {
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
     const educationSection = document.getElementById('education');
     const skillsSection = document.getElementById('skills');
+    const programmingSection = document.getElementById('skill-PL1'); // Added for Programming Languages
     const projectReveal = document.querySelector(".timeline-project-reveal");
 
     function revealOnScroll() {
@@ -23,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (educationSection) {
             const educationTop = educationSection.getBoundingClientRect().top;
-
             if (educationTop < window.innerHeight - 100) {
                 educationSection.classList.add('active');
             } else {
@@ -38,46 +33,41 @@ document.addEventListener("DOMContentLoaded", function () {
             if (revealTop < window.innerHeight - revealPoint) {
                 projectReveal.classList.add("active");
             } else {
-<<<<<<< HEAD
-                projectReveal.classList.remove("active"); // Remove when scrolling up
-=======
                 projectReveal.classList.remove("active");
->>>>>>> parent of abb3170 (Delete static directory)
             }
         }
     }
 
     window.addEventListener("scroll", revealOnScroll);
-<<<<<<< HEAD
-    revealOnScroll(); // Call it once to check initial visibility
-
-    // Smooth scroll for Home link
-=======
     revealOnScroll();
 
->>>>>>> parent of abb3170 (Delete static directory)
+    // Smooth Scroll to Skills Section + Programming Languages
+    const skillsLink = document.querySelector('nav a[href="#skills"]');
+    if (skillsLink) {
+        skillsLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            if (skillsSection) {
+                // Adjust scroll position for better visibility
+                const scrollToPosition = skillsSection.offsetTop - 80;
+                window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
+
+                // Also reveal Programming Languages section
+                if (programmingSection) {
+                    setTimeout(() => {
+                        const progScrollPosition = programmingSection.offsetTop - 80;
+                        window.scrollTo({ top: progScrollPosition, behavior: 'smooth' });
+                    }, 600); // Delay to ensure both sections are revealed
+                }
+            }
+        });
+    }
+
+    // Home link smooth scroll
     const homeLink = document.querySelector('nav a[href="#Home"]');
     if (homeLink) {
         homeLink.addEventListener('click', function(event) {
             event.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-
-<<<<<<< HEAD
-    // Smooth scroll for Skills section
-=======
->>>>>>> parent of abb3170 (Delete static directory)
-    const skillsLink = document.querySelector('nav a[href="#skills"]');
-    if (skillsLink) {
-        skillsLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            if (skillsSection) {
-                const skillsTop = skillsSection.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                const scrollToPosition = skillsTop + window.scrollY - (windowHeight / 2) + (skillsSection.offsetHeight / 2) + 70;
-                window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
-            }
         });
     }
 
@@ -88,11 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 10);
     }
 
-<<<<<<< HEAD
-    // Ensure redirection to Home section on load
-=======
->>>>>>> parent of abb3170 (Delete static directory)
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         resetToHome();
     });
 
@@ -107,11 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleHorizontalScrollbar();
     window.addEventListener('orientationchange', toggleHorizontalScrollbar);
 
-<<<<<<< HEAD
-    // Ensure pressing Enter reloads and redirects to Home
-=======
->>>>>>> parent of abb3170 (Delete static directory)
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
             event.preventDefault();
             resetToHome();
@@ -119,57 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-<<<<<<< HEAD
-    // Force Home section on refresh
-=======
->>>>>>> parent of abb3170 (Delete static directory)
-    window.addEventListener('beforeunload', function() {
+    window.addEventListener('beforeunload', function () {
         resetToHome();
     });
 });
-
-<<<<<<< HEAD
-document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("emailModal");
-    const emailIcon = document.querySelector(".email-icon");
-    const closeBtn = document.querySelector(".close-btn");
-    const emailForm = document.getElementById("emailForm");
-
-    // **Crucial Addition: Initially Hide the Modal**
-    modal.style.display = "none";
-
-    // Open Modal when Email Icon is Clicked
-    emailIcon.addEventListener("click", function () {
-        modal.style.display = "flex";
-    });
-
-    // Close Modal when Close Button is Clicked
-    closeBtn.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    // Close Modal when Clicking Outside of It
-    window.addEventListener("click", function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-
-    // Handle Form Submission
-    emailForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-
-        // Send Email using "mailto"
-        window.location.href = `mailto:jeanclaudeleonard.cueto@gmail.com?subject=Message from ${name}&body=${message}%0D%0A%0D%0AFrom: ${email}`;
-
-        modal.style.display = "none"; // Close Modal
-        emailForm.reset(); // Clear Form Fields
-    });
-});
->>>>>>> parent of fd37966 (g)
-=======
->>>>>>> parent of abb3170 (Delete static directory)
