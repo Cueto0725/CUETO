@@ -27,33 +27,6 @@ body {
     color: #6f00ff; /* Example: LinkedIn color */
 }
 
-.email-icon {
-    position: relative;
-    cursor: pointer;
-}
-
-.email-icon::after {
-    content: attr(data-email);
-    position: absolute;
-    bottom: -30px;
-    left: 50px;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.email-icon:hover::after {
-    opacity: 1;
-    visibility: visible;
-}
-
 page-content {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
