@@ -1,20 +1,36 @@
-
 /* General body styling */
+
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #000000; /* Dark gray background */
     color: white;
+    
    
 }
 
 .social-icons {
-    position: relative;
-    bottom: 130px;  /* Adjust distance from the bottom */
-    right: 265px;   /* Adjust distance from the right */
+    position: absolute; /* Change to absolute for better control */
+    bottom: 75px; /* Adjust as needed */
+    right: 85%; /* Adjust as needed */
+    z-index: 10; /* Ensure it's above other content */
 }
 
+@media (max-width: 768px) {
+    .social-icons {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        bottom: 5px;
+        right: 5px;
+    }
+}
 
 .social-icons a {
     color: white; /* Adjust color as needed */
@@ -190,12 +206,23 @@ h3 {
     gap: 20px;
     margin-top: -150px;
     padding-top: -200px;
-    margin-left: 80px;
+    margin-left: auto; /* Remove fixed margin */
+    margin-right: auto; /* Center the grid */
+    max-width: 1200px; /* Optional: Limit width on larger screens */
     text-align: justify;
     align-items: center;
     justify-items: center;
+    padding-left: 20px; /* Add some padding on the sides */
+    padding-right: 20px;
 }
 
+@media (max-width: 768px) {
+    .three-rows {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
 .three-rows p {
     text-indent: 60px; /* First line indent */
 }
