@@ -595,6 +595,7 @@ h3 {
     line-height: 1.6; /* Improve readability with line spacing */
     text-indent: 5em; /* Indent the first line */
     margin-left: 50px;
+    margin-right: 50px;
 }
 
 .skill-PL1, .skill-item {
