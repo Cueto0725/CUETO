@@ -589,6 +589,14 @@ h3 {
     justify-content: center;
 }
 
+.skills-item {
+    font-size: 1em; /* Make the text slightly smaller */
+    color: #ffffff; /* Change the color to a light gray */
+    line-height: 1.6; /* Improve readability with line spacing */
+    text-indent: 5em; /* Indent the first line */
+    margin-left: 50px;
+}
+
 .skill-PL1, .skill-item {
     padding: 5px 10px;
     margin: 5px;
