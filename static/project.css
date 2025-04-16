@@ -1,0 +1,256 @@
+
+#project {
+    padding: 50px 20px;
+    background-color: #000000; /* Slightly lighter dark background for contrast */
+}
+
+/* Condition for adjusting only the Education section title */
+.section-title.project-title-adjust {
+    /* Add your custom adjustments here */
+    text-align: left; /* Example: Align to the left */
+    margin-left: 100px; /* Example: Adjust left margin */
+    font-size: 2em; /* Example: Change font size */
+    color: #ffffff; /* Example: Change color */
+    margin-bottom: 10px; /* Example: Adjust bottom margin */
+    margin-top: 60px;
+    font-family: 'Cinzel', sans-serif;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #444;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 30px;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 30px;
+}
+
+.timeline-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #7c7c7c;
+    border-radius: 50%;
+    top: 10px;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-icon {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+    left: -10px;
+}
+
+.timeline-content {
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #282828;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #282828 transparent transparent;
+}
+
+.timeline-content h3 {
+    margin: 0 0 5px;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-shadow: none; /* remove 3d effect */
+    margin-left: 0; /* remove left margin from previous styles */
+    margin-bottom: 0px; /* Adjust spacing */
+}
+
+.timeline-date {
+    display: block;
+    font-size: 0.9em;
+    color: #a0a0a0;
+    margin-bottom: 0px;
+}
+
+.timeline-date1 {
+    display: block;
+    font-size: 0.9em;
+    color: #a0a0a0;
+    margin-bottom: 0;
+    text-align:left;
+}
+
+.info1{
+    /* Add your custom styles here */
+    text-align: left;
+}
+
+.info2 {
+    text-align: left; /* Example: Align to the left */
+}
+
+.timeline-content p {
+    font-size: 1em;
+    color: #b4ff05;
+    margin: 0;
+}
+
+.timeline-right {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.timeline-right::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #444;
+    top: 0;
+    bottom: 0;
+    left: 0; /* Line positioned at the left */
+    margin-left: -1px;
+}
+
+.timeline-right-item {
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%; /* Full width for better positioning */
+    padding-left: 50px; /* Space for the line and icon */
+}
+
+.timeline-right-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #7c7c7c;
+    border-radius: 50%;
+    top: 10px;
+    left: -10px; /* Icon positioned on the left */
+    z-index: 1;
+}
+
+.timeline-right-content {
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-left: -10px; /* Shift content to the right */
+}
+
+.timeline-right-content::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #282828 transparent transparent;
+}
+
+.timeline-right-content h3 {
+    margin: 0 0 5px;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-shadow: none;
+    text-align: center; /* Keep text centered */
+    padding-left: 50px; /* Indent effect */
+    display: inline-block; /* Allows text-indent while keeping center alignment */
+    max-width: 80%; /* Prevents text from stretching too far */
+}
+
+
+.timeline-right-date {
+    display: block;
+    font-size: 0.9em;
+    color: #a0a0a0;
+    margin-bottom: 0;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    
+}
+
+.info-right {
+    text-align: left;
+    text-indent: 50px;
+    color: #b4ff05;
+}
+
+.info-right1 {
+    text-align: left;
+    padding: 5px 20px; /* Reduce top and bottom padding */
+    color: white;
+    margin-bottom: 5px; /* Reduce space between Key Features and the list */
+}
+
+.timeline-right-content p {
+    font-size: 1em;
+    margin: 0 0 5px 0; /* Reduce bottom margin to minimize spacing */
+}
+
+.features-list {
+    list-style: none; /* Removes default bullets */
+    padding-left: 20px; /* Ensure list aligns properly */
+    margin-top: 0; /* Prevent unnecessary top spacing */
+}
+
+
+.features-list li {
+    margin-bottom: 10px; /* Adds spacing between items */
+    font-weight:normal; /* Makes the text bolder */
+    color: rgb(225, 225, 225); /* Ensures text is white */
+}
+
+.timeline-project-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.timeline-project-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+

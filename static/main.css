@@ -1,12 +1,11 @@
 /* General body styling */
-
-
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Roboto, sans-serif;
     background-color: #000000; /* Dark gray background */
     color: white;
+    
     
 }
 
@@ -147,6 +146,7 @@ nav {
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 100;      /* Ensure it's above other content */
+   
 }
 
 
@@ -187,7 +187,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 23px;
     font-weight: bold;
@@ -197,7 +197,7 @@ h2 {
 
 
 h3 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 20px;
     font-weight: bold;
@@ -225,7 +225,7 @@ h3 {
 }
 
 .p2 {
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 26px;
     font-weight: bolder;
@@ -322,8 +322,9 @@ h3 {
     color: #ffffff; /* Example: Change color */
     margin-bottom: 10px; /* Example: Adjust bottom margin */
     margin-top: 60px;
+    font-weight: normal;
+    
 }
-
 
 #work {
     padding: 50px 20px;
@@ -339,8 +340,9 @@ h3 {
     color: #ffffff; /* Example: Change color */
     margin-bottom: 10px; /* Example: Adjust bottom margin */
     margin-top: 60px;
+    font-weight: normal;
+ 
 }
-
 
 #project {
     padding: 50px 20px;
@@ -356,12 +358,15 @@ h3 {
     color: #ffffff; /* Example: Change color */
     margin-bottom: 10px; /* Example: Adjust bottom margin */
     margin-top: 60px;
+    font-weight: normal;
+ 
 }
 
 .timeline {
     position: relative;
     max-width: 800px;
     margin: 50px auto;
+  
 }
 
 .timeline::before {
@@ -445,6 +450,7 @@ h3 {
     text-shadow: none; /* remove 3d effect */
     margin-left: 0; /* remove left margin from previous styles */
     margin-bottom: 0px; /* Adjust spacing */
+
 }
 
 .timeline-date {
@@ -475,6 +481,7 @@ h3 {
     font-size: 1em;
     color: #b4ff05;
     margin: 0;
+    
 }
 
 .timeline-right {
@@ -608,6 +615,7 @@ h3 {
     transform: translateY(0);
 }
 
+/* Customize styles for specific elements */
 .skills-section {
     padding: 50px 20px;
     background-color: #1a1a1a;
@@ -620,6 +628,7 @@ h3 {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 20px;
+    font-family: 'Cinzel', serif; /* Cinzel for headers */
 }
 
 .skills-intro {
@@ -636,13 +645,15 @@ h3 {
     justify-content: center;
 }
 
-.skills-item {
-    font-size: 1em; /* Make the text slightly smaller */
-    color: #ffffff; /* Change the color to a light gray */
-    line-height: 1.6; /* Improve readability with line spacing */
-    text-indent: 5em; /* Indent the first line */
+.definition3 {
+    font-family: 'Cinzel', sans-serif; /* Use Roboto for the skills item */
+    font-size: 1em;
+    color: #ffffff;
+    line-height: 1.6;
+    text-indent: 5em;
     margin-left: 50px;
     margin-right: 50px;
+    font-weight: normal;
 }
 
 .skill-PL1, .skill-item {
@@ -651,37 +662,40 @@ h3 {
     border-radius: 5px;
     font-size: 16px;
     display: inline-block;
-  }
-  
-  .skill-PL1 { /*HTML*/
+   
+}
+
+.skill-item:nth-child(1) {
     background-color: #E34F26;
     color: white;
-  }
-  
-  .skill-item:nth-child(2) { /*CSS*/
+}
+
+.skill-item:nth-child(2) {
     background-color: #1572B6;
     color: white;
-  }
-  
-  .skill-item:nth-child(3) { /*Javascript*/
+}
+
+.skill-item:nth-child(3) {
     background-color: #F7DF1E;
     color: black;
-  }
-  
-  .skill-item:nth-child(4) { /*MySQL*/
+}
+
+.skill-item:nth-child(4) {
     background-color: #043861;
     color: white;
-  }
-  
-  .skill-item:nth-child(n+5) { /*all other skills*/
-      background-color: #008080;
-      color: white;
-  }
+}
 
-  .skills-list {
+.skill-item:nth-child(n+5) {
+    background-color: #008080;
+    color: white;
+    
+}
+
+.skills-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
 
 .skills-list span {
@@ -722,67 +736,75 @@ h3 {
     background-color: #00BCD4;
 }
 
-/* Modal Background */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-/* Modal Content */
-.modal-content {
-    background: #222;
+/* Project Section Styling */
+.project-container {
+    text-align: left;
+    margin: 50px auto;
     padding: 20px;
-    width: 300px;
-    border-radius: 8px;
+}
+
+
+#project .project-image {
+    width: 250px;
+    height: 350px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-top: -40px;
+    display: block;
+    border-radius: 15px;
+
+    /* Visual Enhancements */
+    object-fit: cover;
+    filter: contrast(110%) brightness(105%) saturate(120%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    image-rendering: -webkit-optimize-contrast;
+
+    /* Animation setup */
+    transition: transform 0.6s ease;
+}
+
+/* Rotation on hover */
+#project .project-image:hover {
+    transform: rotateY(180deg);
+}
+
+
+.project-button {
+    background-color: #000000; /* Solid background color */
+    color: white;
+    padding: 20px 40px; /* Padding for the rectangular shape */
     text-align: center;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Close Button */
-.close-btn {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    font-size: 22px;
+    text-decoration: none;
+    font-size: 14px; /* Larger font size */
+    font-weight: normal; /* Bold text for emphasis */
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid #000000; /* Border around the button */
+    border-radius: 15px; /* Rounded corners for a rectangle */
     cursor: pointer;
-    color: #ffcc00;
+    transition: all 0.3s ease; /* Smooth transition for all effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    letter-spacing: 1px; /* Slight letter spacing for style */
+    width: 100%; /* Make button take full width */
+    max-width: 350px; /* Set maximum width for button */
+    margin: 0 auto; /* Center the button horizontally */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words if necessary */
+    text-transform: uppercase; /* Optional: Uppercase text for emphasis */
+    line-height: 1.2; /* Spacing between lines */
+    display: block; /* Ensures the button behaves as a block element */
+    margin-left: 50px;
 }
 
-/* Input & Textarea */
-.modal-content input,
-.modal-content textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    background: #333;
-    border: none;
-    color: #fff;
-    font-size: 14px;
+.project-button:hover {
+    background-color: #0f0f0f; /* Lighter shade on hover */
+    color: #fff; /* Keep text color white */
+    border-color: #000000; /* Change border color on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
-/* Submit Button */
-.modal-content button {
-    width: 100%;
-    padding: 8px;
-    background: #ffcc00;
-    color: #222;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+.project-button:active {
+    transform: translateY(1px); /* Slight press effect when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
 }
-
-.modal-content button:hover {
-    background: #fff;
-    color: #222;
-}
-
