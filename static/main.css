@@ -8,12 +8,11 @@ body {
     background-color: #000000; /* Dark gray background */
     color: white;
     
-   
 }
 
 .social-icons {
     position: absolute; /* Change to absolute for better control */
-    bottom: 75px; /* Adjust as needed */
+    bottom: 65px; /* Adjust as needed */
     right: 85%; /* Adjust as needed */
     z-index: 10; /* Ensure it's above other content */
 }
@@ -52,9 +51,9 @@ body {
 .email-icon::after {
     content: attr(data-email);
     position: absolute;
-    bottom: -30px;
-    left: 50px;
-    transform: translateX(-50%);
+    top: 50%; /* Center the popup vertically relative to the icon */
+    left: 100%; /* Position the popup to the right of the icon */
+    transform: translateY(-50%); /* Center the popup vertically */
     background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 5px 10px;
@@ -69,6 +68,33 @@ body {
 .email-icon:hover::after {
     opacity: 1;
     visibility: visible;
+}
+
+
+.button-container {
+    position: relative; /* Makes the button's position relative to this container */
+}
+
+.download-cv button {
+    padding: 10px 20px;
+    background-color: #3c00ff; /* Your desired button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: absolute;
+    bottom: -20px; /* Adjust this value to position the button below */
+    right: 28px; /* Adjust this value to position the button on the right */
+}
+
+.download-cv button:hover {
+    background-color: #9872ff; /* Hover effect for the button */
 }
 
 page-content {
@@ -108,12 +134,15 @@ page-content {
         border-color: transparent;
     }
 }
+
+
+
 /* Navbar styling */
 nav {
     position: sticky; /* Make it sticky */
     top: 0;           /* Stick to the top */
     width: 100%;       /* Full width */
-    background-color: #21212158; /* White navbar with transparency */
+    background-color: #13131358; /* White navbar with transparency */
     padding: 10px 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -128,6 +157,7 @@ nav a {
     display: inline-block;
     margin: 0 10px;
     font-size: 18px;
+ 
 }
 
 nav a:hover {
@@ -141,11 +171,14 @@ nav a:hover {
 }
 
 h1 {
+    font-family: 'Cinzel', serif;
     font-size: 3em;
     text-align: center;
+    font-weight: normal;
 }
 
 .quote {
+    font-family: 'Cinzel', serif;
     font-style: italic;
     color: #979797; /* Soft gray color for the quote */
     font-size: 1em; /* Adjust this size to make it visually appealing */
@@ -175,15 +208,29 @@ h3 {
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5), -2px -2px 5px rgba(255, 255, 255, 0.3); /* 3D effect */
 }
 
- 
+.fresh {
+    font-family: 'Sen', sans-serif;
+    text-align: left;
+    font-size: 26px;
+    font-weight: bolder;
+    margin-top: -35px;
+    margin-left: 100px;
+}
+
+
+.computer-engineering {
+    font-family: 'Sen', sans-serif; /* Change to desired font */
+    color: #007BFF; /* Change to desired color */
+    font-size: 26px; /* Adjust size as needed */
+}
 
 .p2 {
     font-family: 'Verdana', sans-serif;
     text-align: left;
     font-size: 26px;
     font-weight: bolder;
-    margin-top: -15px;
-    margin-left: 80px;
+    margin-top: -25px;
+    margin-left: 100px;
 }
 
 /* Typing effect styling */
@@ -739,45 +786,3 @@ h3 {
     color: #222;
 }
 
-
-/* Main content (initially hidden) */
-#main-content {
-    opacity: 0; /* Initially transparent */
-    visibility: hidden; /* Content is hidden initially */
-    transition: opacity 1s ease, visibility 0s ease 1s; /* Delay visibility change until opacity transition finishes */
-}
-
-/* When content is revealed */
-#main-content.visible {
-    opacity: 1; /* Fully visible */
-    visibility: visible; /* Content becomes visible */
-    transition: opacity 1s ease, visibility 0s ease 0s; /* No delay for visibility when content is revealed */
-}
-
-/* Loading screen styles */
-#loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0); /* Dark background for the loading screen */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 1s ease, visibility 1s ease;
-}
-
-/* Fade out the loading screen */
-#loading-screen.fade-out {
-    opacity: 0;
-    visibility: hidden; /* Hide the loading screen */
-}
-
-/* Loading image styles */
-#loading-image {
-    width: 200px; /* Size of the loading image */
-    height: auto;
-    transition: opacity 1s ease; /* Fade out effect for the image */
-}
