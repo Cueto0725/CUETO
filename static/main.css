@@ -42,7 +42,6 @@ body {
 .social-icons a:hover {
     color: #6f00ff; /* Example: LinkedIn color */
 }
-
 .email-icon {
     position: relative;
     cursor: pointer;
@@ -69,6 +68,7 @@ body {
     opacity: 1;
     visibility: visible;
 }
+
 
 
 .button-container {
