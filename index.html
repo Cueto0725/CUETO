@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cueto Portfolio</title>
-    <link rel="stylesheet" href="static/main.css">
+    <link rel="stylesheet" href="static/css/main.css">
     <script src="static/modal.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Michroma:wght@400;700&;family=Cinzel:wght@400;700&family=Roboto:wght@400;700&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
@@ -24,69 +24,93 @@
             <a href="#project">Projects</a>
             <a href="#about">About</a>
         </nav>
-
-        <!-- Page Content -->
         <div class="page-content">
-            <!-- Home Section -->
-            <div class="content" id="Home">
+            <div class="home-section-container" id="Home">
+              <h3>COMPUTER ENGINEER</h3>
+              <div>
                 <h1>Welcome to My Portfolio</h1>
                 <p class="quote">In the middle of difficulty lies opportunity</p>
-                <h3>COMPUTER ENGINEER</h3>
-                <h2>Hello, I'm</h2>
-                <p class="p2 typing-effect">Jean Claude Leonard C. Cueto</p>
-                <p class="fresh">A fresh Graduate <span class="computer-engineering">Computer Engineering</span></p>
-                <div class="three-rows scroll-reveal">
-                    <p>
-                        Hi, I'm Jean Claude, a recent graduate in computer engineering with a passion for both software and hardware development. I'm particularly interested in software development, data analysis, and networking. My journey in computer engineering has provided me with a strong foundation in problem-solving, coding, and system design. I am eager to contribute my skills and continue learning in a dynamic, collaborative environment.
-                    </p>
-                    <img src="static/images/intropic.jpg" alt="Description of the image" class="right-image">
-
+              </div>
+            </div>
+          
+            <div class="content">
+              <div class="three-rows scroll-reveal">
+                <div class="left-texts-container">
+                  <h2 class="intro-heading">Hello, I'm</h2>
+                  <p class="p2 typing-effect">Jean Claude Leonard C. Cueto</p>
+                  <p class="fresh">A fresh Graduate <span class="computer-engineering">Computer Engineering</span></p>
+          
+                  <p class="definition1">
+                    Hi, I'm Jean Claude, a recent graduate in computer engineering with a
+                    passion for both software and hardware development. I'm particularly
+                    interested in software development, data analysis, and networking. My
+                    journey in computer engineering has provided me with a strong foundation
+                    in problem-solving, coding, and system design. I am eager to contribute
+                    my skills and continue learning in a dynamic, collaborative environment.
+                  </p>
+          
+                  <div class="social-links-cv-container">
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/jean-claude-leonard-cueto-272029283" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/Cueto.Claude" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/claude.cueto" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:jeanclaudeleonard.cueto@gmail.com" class="email-icon" data-email="jeanclaudeleonard.cueto@gmail.com">
-                            <i class="fas fa-envelope"></i>
-                            <div class="button-container">
-                                <a href="https://raw.githubusercontent.com/Cueto0725/CUETO/main/CUETO%20-%20RESUME%20.pdf" class="download-cv" target="_blank">
-                                    <button>Download CV</button>
-                                </a>
-                            </div>
-            
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#" class="email-icon"><i class="fas fa-envelope"></i></a>
                     </div>
+                    <div class="button-container">
+                      <a href="#" class="download-cv" target="_blank">
+                        <button>Download CV</button>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-            </div> <!-- end .content -->
+          
+                <div class="right-image-container">
+                  <img src="static/images/intropic.jpg" alt="Description of the image" class="right-image">
+                </div>
+              </div>
+            </div>
+          </div>
 
-                    <!-- Skills Section -->
-            <section id="skill-PL1" class="skills-section scroll-reveal">
-                <h2>Programming Languages</h2>
-                <p class="definition3">
-                    Driven by a passion for both software and hardware, I recently graduated with a degree in Computer Engineering. My skill set encompasses front-end development using HTML, CSS, and JavaScript. I am currently focused on mastering MySQL to strengthen my database management capabilities. I seek opportunities within a challenging and innovative industry setting where I can apply and expand my technical expertise.
-                </p>
-                <div class="Programming-list">
-                    <span class="skill-item">HTML</span>
-                    <span class="skill-item">CSS</span>
-                    <span class="skill-item">JavaScript</span>
-                    <span class="skill-item">MySQL</span>
-                    <span class="skill-item">Software Development</span>
-                    <span class="skill-item">Hardware Principles</span>
-                    <span class="skill-item">Data Analysis</span>
-                    <span class="skill-item">Networking</span>
-                </div>
-            </section>
 
-            <section id="skills" class="skills-section scroll-reveal">
-                <h2>Skills</h2>
-                <div class="skills-list">
-                    <span class="skill1">Fast Learner</span>
-                    <span class="skill2">Teamwork</span>
-                    <span class="skill3">Critical Thinking</span>
-                    <span class="skill4">Technical Proficiency</span>
-                    <span class="skill5">Visual Studio</span>
-                    <span class="skill6">Android Studio</span>
-                    <span class="skill7">AutoCAD</span>
+                            <!-- Parent container for both skills sections -->
+            <div class="skills-row">
+                <!-- Programming Languages Section Container -->
+                <div class="skills-container">
+                    <section id="skill-PL1" class="skills-section scroll-reveal">
+                        <h2>Technical Skills</h2>
+                        <p class="definition3">
+                            Driven by a passion for both software and hardware, I recently graduated with a degree in Computer Engineering. My skill set encompasses front-end development using HTML, CSS, and JavaScript. I am currently focused on mastering MySQL to strengthen my database management capabilities. I seek opportunities within a challenging and innovative industry setting where I can apply and expand my technical expertise.
+                        </p>
+                        <div class="Programming-list">
+                            <span class="skill-item">HTML</span>
+                            <span class="skill-item">CSS</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">MySQL</span>
+                            <span class="skill-item">Software Development</span>
+                            <span class="skill-item">Hardware Principles</span>
+                            <span class="skill-item">Data Analysis</span>
+                            <span class="skill-item">Networking</span>
+                        </div>
+                    </section>
                 </div>
-            </section>
+
+                <!-- Skills Section Container -->
+                <div class="skills-container1">
+                    <section id="skills" class="skills-section scroll-reveal">
+                        <h2>Soft Skills</h2>
+                        <div class="skills-list">
+                            <span class="skill1">Fast Learner</span>
+                            <span class="skill2">Teamwork</span>
+                            <span class="skill3">Critical Thinking</span>
+                            <span class="skill4">Technical Proficiency</span>
+                            <span class="skill5">Visual Studio</span>
+                            <span class="skill6">Android Studio</span>
+                            <span class="skill7">AutoCAD</span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
 
             <!-- Education Section -->
             <section id="education">

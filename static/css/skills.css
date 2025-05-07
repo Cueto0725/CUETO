@@ -1,0 +1,168 @@
+.skills-section h2 {
+    text-align: center; /* Center the header text */
+    font-size: 2.5em;
+    font-family: 'Cinzel', serif; /* Cinzel for headers */
+    color: var(--font-color);
+    margin-bottom: 5px; /* Adds a 5px gap between the header and the paragraph */
+    font-weight: var(--font-weight-nrm);
+}
+
+/* Parent container for both .skills-container and .skills-container1 */
+.skills-row {
+    display: flex;               /* Use flex to align children side by side */
+    justify-content: space-between; /* Ensure space between the columns */
+    gap: 5px;                   /* Optional: Adjust space between the two containers */
+    width: 100%;    
+    margin-top: 10px;      
+
+
+/* First container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;                   /* Space between items in the containers */
+    width: 40%;  
+    margin-left: 10%;                /* Take up approximately 50% of the available width */
+}
+
+.skills-container1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;                   /* Space between items in the containers */
+    width: 40%;     
+    margin-right: 10%;
+}
+   
+.definition3 {
+    font-family: var(--cinzel-font);
+    font-size: var(--font-size);
+    color: #ffffff;
+    line-height: 1.6;
+    text-indent: 2em;
+    font-weight: normal;
+    text-align: justify; /* Justify the text */
+    margin-top: 5px; /* Adds 5px gap from the above element */
+    margin-left:5px;
+    margin-right:5px;
+}
+
+
+
+/* Optional: Media query for responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .skills-row {
+        flex-direction: column; /* Stack containers vertically on small screens */
+    }
+
+    .skills-container, .skills-container1 {
+        width: 100%;           /* Ensure full width on small screens */
+    }
+}
+
+
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Customize styles for specific elements */
+.skills-section {
+    padding: 30px 20px; /* Reduced padding for smaller containers */
+    background-color: var(--container-pg-skills);
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+
+
+
+.Programming-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.skill-PL1, .skill-item {
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.skill-item:nth-child(1) {
+    background-color: #E34F26;
+    color: white;
+}
+
+.skill-item:nth-child(2) {
+    background-color: #1572B6;
+    color: white;
+}
+
+.skill-item:nth-child(3) {
+    background-color: #F7DF1E;
+    color: black;
+}
+
+.skill-item:nth-child(4) {
+    background-color: #043861;
+    color: white;
+}
+
+.skill-item:nth-child(n+5) {
+    background-color: #008080;
+    color: white;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-list span {
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+    color: rgb(251, 251, 251); /* Default text color */
+}
+
+.skill1 {
+    background-color: #4CAF50;
+}
+
+.skill2 {
+    background-color: #2196F3;
+}
+
+.skill3 {
+    background-color: #FF9800;
+    color: black; /* Orange often looks better with black text */
+}
+
+.skill4 {
+    background-color: #9C27B0;
+}
+
+.skill5 {
+    background-color: #607D8B;
+}
+
+.skill6 {
+    background-color: #A1887F;
+}
+
+.skill7 {
+    background-color: #00BCD4;
+}

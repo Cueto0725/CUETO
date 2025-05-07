@@ -1,0 +1,290 @@
+/* Import skills.css into main.css */
+@import url('../css/skills.css');
+@import url('../css/icons.css');
+@import url('../css/navbar.css');
+@import url('../css/education.css');
+@import url('../css/effects.css');
+
+
+/* General body styling */
+:root {
+    --body: #000000;
+    --header-font-color: #ffffff;
+    --font-color: #ffffff;
+    --main-font: 'Roboto', sans-serif;  
+    --cinzel-font: 'Cinzel', sans-serif;
+    --padding-default: 1rem;
+    --container-pg-skills:  #161616;;
+    --font-size: 15px;
+    --font-size-intro-header: 20px;
+    -font-weight-nrm: normal; 
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font); /* Added the variable here */
+    background-color: var(--body);
+    color: var(--header-font-color)
+  }
+
+  .home-section-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Left (h3), Center (div with h1 & p), Right (empty) */
+    align-items: center; /* Vertically align items in the grid row */
+    gap: 20px; /* Optional: Adjust space between the main elements */
+  }
+  
+  .home-section-container > div {
+    text-align: center; /* Center the content within the middle div */
+    margin-right: 40%
+  }
+
+  
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 5px; /* Add the 5px gap below the title */
+  }
+  
+  .quote {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    color: #979797;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 0; /* Remove default top margin */
+  }
+  
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 250px;
+    margin-bottom: 100px;
+    color: rgb(253, 253, 253);
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5), -2px -2px 5px rgba(255, 255, 255, 0.3);
+  }
+
+  .left-texts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between elements */
+    align-items: flex-start;
+    padding: 5px;
+    max-width: 90%; /* Limit container width */
+    gap: 15px; /* Adjust gap between text elements */
+    position: relative; /* Needed for absolute positioning of social icons container */
+    min-height: 300px; /* Adjust this value based on the height of your text content */
+  }
+
+  
+.three-rows {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: start; /* Important: allow items to align left */
+    padding: 0 10px;
+    margin-left: 15%;
+}
+
+
+/* Heading */
+.intro-heading {
+    font-family: 'Cinzel', sans-serif;
+    font-size: var(--font-size-intro-header);
+    color: var(--header-font-color);
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* Image */
+.right-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(138, 122, 122, 0.3);
+    border: 4px solid #fff;
+    animation: glow 2s infinite alternate;
+    margin-left: 50px;
+}
+
+/* Typing Effect */
+.p2.typing-effect {
+    font-size: 30px;
+    font-weight: bold;
+    color: #a6ff00;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    animation: typing 5s steps(43) 1s forwards, blink 0.75s step-end infinite;
+    padding-right: 5px;
+    margin: 0;
+}
+
+/* Subheading */
+.fresh {
+    text-indent: 20px;
+    font-family: 'Sen', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+/* Paragraph */
+.definition1 {
+    font-family: var(--main-font);
+    text-align: justify;
+    text-indent: 60px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Highlighted Span */
+.computer-engineering {
+    color: #007BFF;
+    font-size: 26px;
+}
+
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        border-color: rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+        border-color: rgba(255, 255, 255, 1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .three-rows {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .right-image {
+        margin-top: 30px;
+    }
+
+    .left-text-container {
+        align-items: center;
+        text-align: center;
+    }
+
+    .definition1 {
+        text-indent: 30px;
+    }
+}
+
+
+
+
+
+/*until here */ 
+
+
+.features-list {
+    list-style: none; /* Removes default bullets */
+    padding-left: 20px; /* Ensure list aligns properly */
+    margin-top: 0; /* Prevent unnecessary top spacing */
+}
+
+
+.features-list li {
+    margin-bottom: 10px; /* Adds spacing between items */
+    font-weight:normal; /* Makes the text bolder */
+    color: rgb(225, 225, 225); /* Ensures text is white */
+}
+
+.timeline-project-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.timeline-project-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Project Section Styling */
+.project-container {
+    text-align: left;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+
+#project .project-image {
+    width: 250px;
+    height: 350px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-top: -40px;
+    display: block;
+    border-radius: 15px;
+
+    /* Visual Enhancements */
+    object-fit: cover;
+    filter: contrast(110%) brightness(105%) saturate(120%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    image-rendering: -webkit-optimize-contrast;
+
+    /* Animation setup */
+    transition: transform 0.6s ease;
+}
+
+/* Rotation on hover */
+#project .project-image:hover {
+    transform: rotateY(180deg);
+}
+
+
+.project-button {
+    background-color: #000000; /* Solid background color */
+    color: white;
+    padding: 20px 40px; /* Padding for the rectangular shape */
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8em; /* Larger font size */
+    font-weight: normal; /* Bold text for emphasis */
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid #000000; /* Border around the button */
+    border-radius: 15px; /* Rounded corners for a rectangle */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for all effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    letter-spacing: 1px; /* Slight letter spacing for style */
+    width: 100%; /* Make button take full width */
+    max-width: 350px; /* Set maximum width for button */
+    margin: 0 auto; /* Center the button horizontally */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words if necessary */
+    text-transform: uppercase; /* Optional: Uppercase text for emphasis */
+    line-height: 1.2; /* Spacing between lines */
+    display: block; /* Ensures the button behaves as a block element */
+    margin-left: 50px;
+}
+
+.project-button:hover {
+    background-color: #0f0f0f; /* Lighter shade on hover */
+    color: #fff; /* Keep text color white */
+    border-color: #000000; /* Change border color on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.project-button:active {
+    transform: translateY(1px); /* Slight press effect when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+}
+
