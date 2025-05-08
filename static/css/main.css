@@ -6,6 +6,8 @@
 @import url('../css/effects.css');
 @import url('../css/project.css');
 @import url('../css/media.css');
+@import url('../css/footer.css');
+@import url('../css/work.css');
 
 
 /* General body styling */
@@ -18,7 +20,7 @@
     --padding-default: 1rem;
     --container-pg-skills:  #181818;
     --container-pg-education: #181818;
-    --container-pg-school: #414141;
+    --container-pg-school: #1d1c1c;
     --container-project:  #181818;
     --font-size: 15px;
     --font-size-intro-header: 20px;
@@ -27,7 +29,7 @@
     --font-weight-educ:normal;
     --font-weight-skills:normal;
     --font-navbar: 14px;
-    --icon-color: #a6ff00;
+    --icon-color: #88ff00;
     
   }
   

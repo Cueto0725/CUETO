@@ -87,6 +87,13 @@
     z-index: 1;
 }
 
+.project-image-container .project-image.custom-project-image {
+    margin-top: 30px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
 
 /* New Navbar style for project section */
 .navbar-project {
@@ -103,6 +110,11 @@
     gap: 20px;
     z-index: 9999;               /* Make sure it stays above content */
 }
+
+
+
+
+
 
 /* Style for the project navigation links */
 .navbar-link {

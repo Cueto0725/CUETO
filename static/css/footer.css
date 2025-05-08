@@ -1,0 +1,134 @@
+.contact-container {
+    display: flex;
+    background-color: black;
+    padding: 30px 20px; /* Reduced top/bottom padding */
+    color: white;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 120px;
+    margin-left: 180px;
+}
+
+.contact-left-container {
+    flex: 1;
+}
+
+.contact-right-container {
+    flex: 2;
+    margin-right: 50px;
+}
+
+.contact-left {
+    text-align: center;
+}
+
+.contact-card {
+    background-color: #222;
+    padding: 30px; /* Reduced padding */
+    width: 250px;
+    height: auto; /* Still auto, but the content will dictate less height */
+    margin: 0 auto;
+    /* position: left; - Remember this is not a valid value */
+}
+
+.profile-image img {
+    width: 80%; /* Slightly smaller image */
+    border-radius: 50%;
+    display: block; /* Prevent extra space below inline images */
+    margin: 0 auto 10px; /* Center image and add bottom margin */
+}
+
+.contact-card h3 {
+    font-size: 1.3rem; /* Slightly smaller heading */
+    margin: 10px 0 5px; /* Reduced bottom margin */
+}
+
+.contact-card p {
+    font-size: 1rem; /* Slightly smaller paragraph text */
+    margin: 5px 0;
+    line-height: 1.2; /* Tighter line height */
+}
+
+.contact-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5px; /* Added top margin for spacing */
+    margin-bottom: 5px; /* Reduced bottom margin */
+}
+
+.contact-card ul li {
+    font-size: 0.9rem; /* Slightly smaller list items */
+    padding: 2px 0; /* Reduced vertical padding */
+}
+
+
+.contact-button {
+    display: inline-block;
+    color: white;
+    padding: 10px 20px; /* Using the same padding as .download-cv button */
+    margin: 3px; /* Keep the existing margin */
+    text-decoration: none;
+    border-radius: 0; /* No rounded corners */
+    font-size: 16px; /* Using the same font size as .download-cv button */
+    cursor: pointer;
+    border: 2px solid var(--icon-color); /* Border with icon color */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover */
+    align-items: center; /* Vertically align content (if any) */
+    justify-content: center; /* Horizontally align content (if any) */
+}
+
+.contact-button:hover {
+    background-color: var(--icon-color); /* Hover background color */
+}
+
+.contact-right h2 {
+    font-size: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 22px);
+    padding: 8px; /* Reduced padding */
+    margin-bottom: 15px; /* Reduced bottom margin */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #222;
+    color: white;
+    box-sizing: border-box;
+    font-size: 0.9rem; /* Smaller form text */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 80px; /* Reduced min-height */
+}
+
+
+.animated-name {
+    font-family: var(--cinzel-font);
+    font-size: 18px; /* Adjust to your desired smaller font size */
+    font-weight: var(--font-weight-nrm);
+    color: var(--font-color2);
+    white-space: nowrap; /* Keep this to prevent wrapping */
+    margin: 0;
+    display: inline-block; /* To respect width and padding if you add them */
+}
+
+.submit-button {
+    padding: 10px 10px;
+    background-color: #000000; /* Black background */
+    color: white;
+    border: 2px solid white; /* Border with icon color */
+    border-radius: 0; /* No rounded corners */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover */
+    width: 97%; /* Make it full width of the form */
+
+}
+
+.submit-button:hover {
+    background-color: rgb(66, 66, 66) /* Hover background color */
+}

@@ -5,8 +5,12 @@
     align-items: center;
     justify-content: flex-start;
     min-height: 80vh;
+    margin-bottom: 0; /* Ensure no extra space below */
 }
 
+.education-description{
+    font-family: var(--cinzel-font);
+}
 .unified-education-title {
     text-align: center;
     font-family: var(--cinzel-font);
