@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectSection = document.getElementById('project');
     const aboutSection = document.getElementById('about');
     const homeSection = document.getElementById('Home'); // Get the Home section
+    const navLinks = document.querySelectorAll('nav a'); // Select all navigation links
     const offset = 80; // You can change this default offset
 
     function revealOnScroll() {
@@ -48,58 +49,26 @@ document.addEventListener("DOMContentLoaded", function () {
     revealOnScroll();
 
     // Smooth scroll logic for navigation links
-    const homeLink = document.querySelector('nav a[href="#Home"]');
-    if (homeLink && homeSection) { // Ensure homeSection exists
-        homeLink.addEventListener('click', function (event) {
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
             event.preventDefault();
-            window.scrollTo({ top: homeSection.offsetTop, behavior: 'smooth' });
-        });
-    }
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
 
-    const educationLink = document.querySelector('nav a[href="#education"]');
-    if (educationLink && educationSection) {
-        educationLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            const scrollToPosition = educationSection.offsetTop - offset;
-            window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
-        });
-    }
+            if (targetElement) {
+                let scrollToPosition = targetElement.offsetTop;
+                if (targetId === '#Home') {
+                    scrollToPosition = 0; // Scroll to the very top for Home
+                } else {
+                    scrollToPosition -= offset; // Apply offset for other sections
+                }
+                window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
 
-    const skillsLink = document.querySelector('nav a[href="#skills"]');
-    if (skillsLink && skillsSection) {
-        skillsLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            const scrollToPosition = skillsSection.offsetTop - offset;
-            window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
+                // Remove focus from the clicked link to potentially remove some default hover/focus styles
+                this.blur();
+            }
         });
-    }
-
-    const workLink = document.querySelector('nav a[href="#work"]');
-    if (workLink && workSection) {
-        workLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            const scrollToPosition = workSection.offsetTop - offset;
-            window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
-        });
-    }
-
-    const projectLink = document.querySelector('nav a[href="#project"]');
-    if (projectLink && projectSection) {
-        projectLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            const scrollToPosition = projectSection.offsetTop - offset;
-            window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
-        });
-    }
-
-    const aboutLink = document.querySelector('nav a[href="#about"]');
-    if (aboutLink && aboutSection) {
-        aboutLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            const scrollToPosition = aboutSection.offsetTop - offset;
-            window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
-        });
-    }
+    });
 
     function resetToHome() {
         setTimeout(() => {
