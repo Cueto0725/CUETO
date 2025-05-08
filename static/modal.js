@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
     const educationSection = document.getElementById('education');
     const skillsSection = document.getElementById('skills');
-    const programmingSection = document.getElementById('skill-PL1'); // Added for Programming Languages
+    const programmingSection = document.querySelector("#skill-PL1");
     const projectReveal = document.querySelector(".timeline-project-reveal");
 
     function revealOnScroll() {
@@ -38,31 +38,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Initial scroll reveal trigger
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll();
 
-    // Smooth Scroll to Skills Section + Programming Languages
+    // Smooth scroll logic
     const skillsLink = document.querySelector('nav a[href="#skills"]');
     if (skillsLink) {
         skillsLink.addEventListener('click', function (event) {
             event.preventDefault();
             if (skillsSection) {
-                // Adjust scroll position for better visibility
                 const scrollToPosition = skillsSection.offsetTop - 80;
                 window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
 
-                // Also reveal Programming Languages section
                 if (programmingSection) {
                     setTimeout(() => {
                         const progScrollPosition = programmingSection.offsetTop - 80;
                         window.scrollTo({ top: progScrollPosition, behavior: 'smooth' });
-                    }, 600); // Delay to ensure both sections are revealed
+                    }, 600); 
                 }
             }
         });
     }
 
-    // Home link smooth scroll
     const homeLink = document.querySelector('nav a[href="#Home"]');
     if (homeLink) {
         homeLink.addEventListener('click', function(event) {
@@ -105,4 +103,3 @@ document.addEventListener("DOMContentLoaded", function () {
         resetToHome();
     });
 });
-

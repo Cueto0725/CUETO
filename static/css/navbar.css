@@ -1,17 +1,20 @@
 nav {
-    position: absolute;
+    position: fixed;         /* Make it stay at the top on scroll */
     top: 0;
     right: 0;
+    width: 100%;             /* Full width to cover top area */
+    z-index: 9999;           /* Ensure it stays above all content */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: add semi-transparent bg for readability */
     font-size: var(--font-navbar);
-    background-color: transparent;
+    font-family: var(--cinzel-font);
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-right: 50px;
+    font-weight: var(--font-navbar)
+    margin: 0;   
+    margin-right: 50px;            /* Remove margin so it sticks properly */
 }
 
 nav a {
