@@ -98,18 +98,18 @@
 }
 
 .skill-item:nth-child(1) {
-    background-color: #E34F26;
+    background-color: #6b7cff;
     color: white;
 }
 
 .skill-item:nth-child(2) {
-    background-color: #1572B6;
+    background-color: #0f5e96;
     color: white;
 }
 
 .skill-item:nth-child(3) {
-    background-color: #F7DF1E;
-    color: black;
+    background-color: #0d057b;
+    color: rgb(255, 255, 255);
 }
 
 .skill-item:nth-child(4) {
@@ -118,7 +118,7 @@
 }
 
 .skill-item:nth-child(n+5) {
-    background-color: #008080;
+    background-color: #011010;
     color: white;
 }
 
@@ -165,3 +165,4 @@
 .skill7 {
     background-color: #00BCD4;
 }
+

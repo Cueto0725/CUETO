@@ -13,11 +13,12 @@
     --font-color: #ffffff;
     --cinzel-font: 'Cinzel', sans-serif;
     --padding-default: 1rem;
-    --container-pg-skills:  #161616;;
+    --container-pg-skills:  #1f1f1f;;
     --font-size: 15px;
     --font-size-intro-header: 20px;
     -font-weight-nrm: normal; 
     --font-navbar: 14px;
+    --icon-color: #a6ff00;
   }
   
   body {
@@ -48,9 +49,8 @@
   }
   
   .quote {
-    font-style: italic;
-    color: #979797;
-    font-size: 1em;
+    color: var(--icon-color);
+    font-size: 13px;
     text-align: center;
     margin-top: 0; /* Remove default top margin */
   }
