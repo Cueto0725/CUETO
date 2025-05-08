@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cueto Portfolio</title>
     <link rel="stylesheet" href="../static/css/main.css">
-    <script src="../static/modal.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Michroma:wght@400;700&;family=Cinzel:wght@400;700&family=Roboto:wght@400;700&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -118,13 +117,13 @@
             <h2 class="unified-project-title scroll-reveal">Projects</h2>
         
             <div class="project-section-wrapper scroll-reveal">
-                <!-- Links for the systems and "For More Info" together -->
                 <div class="project-links">
-                    <a href="#cash-invoice" class="navbar-link">Cash Invoice System</a>
-                    <a href="#purchasing-system" class="navbar-link">Purchasing System</a>
-                    <a href="#taps" class="navbar-link">TAPS</a>
-                    <a href="#more-info" class="navbar-link">For More Info</a>
-                    <div class="project-text-content">
+                    <a href="#Thesis" class="navbar-link" data-target="thesis">Thesis</a>
+                    <a href="#cash-invoice" class="navbar-link" data-target="cash-invoice">Cash Invoice System</a>
+                    <a href="#purchasing-system" class="navbar-link" data-target="purchasing-system">Purchasing System</a>
+                    <a href="#taps" class="navbar-link" data-target="taps">TAPS</a>
+                    <a href="#more-info" class="navbar-link" data-target="more-info">For More Info</a>
+                    <div class="project-text-content" id="project-content">
                         <span class="project-title">A Portable Tracking and Safety Device for the Students of Lucsuhin Integrated School</span>
                         <p class="project-description">
                             My thesis project involves developing a portable tracking and safety device integrated with a microcontroller.
@@ -185,5 +184,8 @@
             </div>
         </section>
     </div>
+            
+        <script src="../static/js/modal.js" defer></script>
+        <script src="../static/js/project.js" defer></script>
 </body>
 </html>
