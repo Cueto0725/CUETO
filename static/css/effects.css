@@ -26,7 +26,7 @@ page-content {
         width: 0;
     }
     to {
-        width: 23.5ch; /* Adjust this based on the full length of the name */
+        width: 27.5ch; /* Adjust this based on the full length of the name */
     }
 }
 

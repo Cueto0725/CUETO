@@ -1,7 +1,6 @@
 .skills-section h2 {
     text-align: center; /* Center the header text */
     font-size: 2.5em;
-    font-family: 'Cinzel', serif; /* Cinzel for headers */
     color: var(--font-color);
     margin-bottom: 5px; /* Adds a 5px gap between the header and the paragraph */
     font-weight: var(--font-weight-nrm);
@@ -35,7 +34,6 @@
 }
    
 .definition3 {
-    font-family: var(--cinzel-font);
     font-size: var(--font-size);
     color: #ffffff;
     line-height: 1.6;
