@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const workSection = document.getElementById('work');
     const projectSection = document.getElementById('project');
     const aboutSection = document.getElementById('about');
+    const homeSection = document.getElementById('Home'); // Get the Home section
     const offset = 80; // You can change this default offset
 
     function revealOnScroll() {
@@ -48,10 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Smooth scroll logic for navigation links
     const homeLink = document.querySelector('nav a[href="#Home"]');
-    if (homeLink) {
+    if (homeLink && homeSection) { // Ensure homeSection exists
         homeLink.addEventListener('click', function (event) {
             event.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: homeSection.offsetTop, behavior: 'smooth' });
         });
     }
 
