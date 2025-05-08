@@ -1,70 +1,115 @@
-.project-section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    font-family: var(--cinzel-font);
-    background-color: transparent;
-}
-
-.section-title {
-    display: block;
-    font-size: 2rem;
-    font-weight: var(--font-weight-skills);
-    font-family: var(--cinzel-font);
-    margin-left: 5%;
-    margin-bottom: 15px;
-    color: var(--header-font-color);
-    text-align: left;
-}
-
-.projects-container {
+#project {
+    background-color: var(--body);
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: stretch;
+    align-items: center;
+    justify-content: flex-start;
+    max-height: 100%;
 }
 
-.project-text-container {
-    background-color: var(--container-project);
-    padding: 15px 20px;
-    border-radius: 8px;
-}
-
-.project-item {
-    background-color: transparent;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease;
-}
-
-.project-item:hover {
-    transform: scale(1.02);
-}
-
-.project-image {
-    width: 100%;
-    max-height: 250px;
-    object-fit: cover;
-}
-
-.project-details {
-    padding: 20px;
+/* Title style (same as .unified-education-title) */
+.unified-project-title {
     text-align: center;
-    color: var(--font-color);
-}
-
-.project-title {
-    font-size: 2em;
     font-family: var(--cinzel-font);
-    margin-bottom: 10px;
-    display: block;
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: var(--font-weight-educ);
+    margin-bottom: 5px;
 }
 
+/* Project wrapper (matches .education-section-wrapper) */
+.project-section-wrapper {
+    display: flex;
+    gap: 30px;
+    background-color: var(--container-project);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Left: Text */
+.project-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 30px;
+}
+
+/* Project title */
+.project-title {
+    font-size: 1.5rem;
+    font-family: var(--cinzel-font);
+    font-weight: var(--font-weight-educ);
+    color: #ffffff;
+    text-align: center;
+    margin-right: 10%
+}
+
+/* Project description */
 .project-description {
     font-size: var(--font-size);
-    line-height: 1.5;
+    font-family: var(--cinzel-font);
+    line-height: 1.6;
+    text-align: justify;
+    text-indent: 30px;
     color: var(--font-color);
 }
 
+/* Right: Image container (same size ratio and position as desired) */
+.project-image-container .project-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: auto;
+    object-fit: fill;
+}
+
+
+.project-image:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* New Navbar style for project section */
+.navbar-project {
+    position: absolute;          /* Position it relative to the section */
+    top: -40px;                  /* Move it slightly above the project content */
+    left: 0;                     /* Align it to the left side of the container */
+    width: 100%;                 /* Full width */
+    padding: 10px 20px;          /* Padding around the links */
+    background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+    font-size: var(--font-navbar); 
+    font-family: var(--cinzel-font);
+    display: flex;
+    justify-content: flex-start; /* Align the links to the left */
+    gap: 20px;
+    z-index: 9999;               /* Make sure it stays above content */
+}
+
+/* Style for the project navigation links */
+.navbar-link {
+    font-family: var(--cinzel-font);  /* Apply the Cinzel font */
+    font-weight: normal;              /* Set the font weight to normal */
+    text-decoration: underline;       /* Always display the underline */
+    color: white;                     /* Set the text color to white */
+    text-decoration-color: var(--icon-color); /* Set the underline color to the icon color */
+    transition: color 0.3s, text-decoration-color 0.3s; /* Smooth color transition on hover */
+    margin-left: 10px;
+}
+
+/* Hover effect for links (only change the color of the text) */
+.navbar-link:hover {
+    color: #95d500de;  /* Change the text color on hover */
+    text-decoration-color: #95d500de; /* Change the underline color to match hover text color */
+}
