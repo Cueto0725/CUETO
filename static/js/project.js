@@ -1,28 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
     const projectLinks = document.querySelectorAll('.navbar-link');
     const projectContent = document.getElementById('project-content');
+    const projectImage = document.getElementById('project-image'); // ✅ Add this line for updating images
 
     // Define the content for each project
     const projectData = {
-            'thesis': {
+        'thesis': {
             title: "A Portable Tracking and Safety Device for the Students of Lucsuhin Integrated School",
-            description: "My thesis project involves developing a portable tracking and safety device integrated with a microcontroller. Along with the device, I created three applications tailored for parents, teachers, and police, allowing them to monitor children's location and camera in real-time. The device also includes an emergency button that, when triggered, sends an alert to the parent. From there, the parent can contact the police for assistance, who can then track the child's location using the integrated location tracker. This system is designed to ensure the safety of students, providing quick responses in emergency situations."
+            description: "My thesis project involves developing a portable tracking and safety device integrated with a microcontroller. Along with the device, I created three applications tailored for parents, teachers, and police, allowing them to monitor children's location and camera in real-time. The device also includes an emergency button that, when triggered, sends an alert to the parent. From there, the parent can contact the police for assistance, who can then track the child's location using the integrated location tracker. This system is designed to ensure the safety of students, providing quick responses in emergency situations.",
+            image: "../static/images/Picture2.jpg", // Image for Thesis
+            alt: "Thesis Project Image"
         },
         'cash-invoice': {
             title: "Cash Invoice System",
-            description: "During my internship, I developed a Cash Invoice System for the company that will handle three different clients with a database, backend, and frontend that can interact with the user."
+            description: "During my internship, I served as a Full Stack Developer in the development of a Cash Invoice System. This system was designed to streamline the invoicing processes of three different companies, eliminating the need for manual copying and pasting. As a result, employees were able to work more efficiently and with fewer errors. I utilized JavaScript, Python, HTML, and CSS for the frontend and backend, and used MySQL to manage the system’s database.",
+            icon: "fa-file-invoice-dollar", // Font Awesome Icon for Cash Invoice
+            alt: "Invoice Icon"
         },
         'purchasing-system': {
             title: "Purchasing System",
-            description: "Description for the Purchasing System goes here."
+            description: "Together with my co-workers during my internship, we developed a Purchasing System for the company, designed to manage data for various clients and integrate seamlessly with a Web App. I contributed to both the front-end and back-end of the project—designing the user interface and implementing functional components for smooth user interaction. On the back end, I worked with Python and MySQL, integrating the system through APIs and AJAX using JavaScript. Through this project, I gained valuable hands-on experience in full stack development and improved my skills in building dynamic, database-driven web applications.",
+            icon: "fa-cart-shopping", // Font Awesome Icon for Purchasing System
+            alt: "Purchasing Icon"
         },
         'taps': {
             title: "TAPS",
-            description: "Description for the TAPS project goes here."
+            description: "Description for the TAPS project goes here.",
+            image: "../static/images/bg.jpg", // Image for TAPS
+            alt: "TAPS Image"
         },
         'more-info': {
             title: "For More Info",
-            description: "Detailed information about all projects can be found here."
+            description: "Detailed information about all projects can be found here.",
+            image: "../static/images/more.jpg", // Image for more info
+            alt: "More Info Image"
         }
     };
 
@@ -32,11 +43,27 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault(); // Prevent the default link behavior
 
             const targetId = e.target.getAttribute('data-target');
-            
+
             if (projectData[targetId]) {
-                // Update the content of the project section
+                // Update the project title and description
                 projectContent.querySelector('.project-title').textContent = projectData[targetId].title;
                 projectContent.querySelector('.project-description').textContent = projectData[targetId].description;
+
+                // Update image or icon
+                if (projectData[targetId].image) {
+                    // If the project has an image
+                    projectImage.src = projectData[targetId].image;
+                    projectImage.alt = projectData[targetId].alt;
+                    projectImage.style.display = "block"; // Ensure image is visible
+                    projectImage.classList.remove('icon'); // Remove any icon class
+                } else if (projectData[targetId].icon) {
+                    // If the project has an icon (like for Cash Invoice or Purchasing System)
+                    projectImage.style.display = "none"; // Hide image
+                    const icon = document.createElement('i');
+                    icon.className = `fa-solid ${projectData[targetId].icon} project-image`; // Add the icon
+                    projectImage.parentNode.appendChild(icon); // Add the icon to the container
+                    icon.style.fontSize = '140px'; // Adjust icon size to match the image size
+                }
             }
         });
     });
