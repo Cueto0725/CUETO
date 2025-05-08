@@ -1,6 +1,5 @@
 /* main.css */
 
-/* General body styling */
 :root {
   --body: #000000;
   --header-font-color: #ffffff;
@@ -19,6 +18,7 @@
   --font-weight-educ: normal;
   --font-weight-skills: normal;
   --icon-color: #88ff00;
+  --social-icon-color: blue; /* Define social icon color */
 }
 
 body {
@@ -28,6 +28,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-padding-top: 60px; /* Adjust based on navbar height */
 }
 
 #main-content {
@@ -40,11 +41,13 @@ body {
 nav {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a translucent background */
-  position: sticky;
+  padding: 15px 0; /* Slightly reduce padding for a thinner sticky nav */
+  background-color: rgba(0, 0, 0, 0.9); /* Adjust transparency if needed */
+  position: fixed; /* Make it stick */
   top: 0;
-  z-index: 100;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it's above other content */
 }
 
 nav a {
@@ -60,7 +63,8 @@ nav a:hover {
 }
 
 .page-content {
-  padding: 20px;
+  padding-top: 80px; /* Adjust based on navbar height */
+  padding-bottom: 20px;
 }
 
 /* Home Section */
@@ -72,7 +76,7 @@ nav a:hover {
 .home-section-container h3 {
   font-size: 1.5em;
   color: var(--font-color2);
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* Adjusted spacing */
 }
 
 .home-section-container h1 {
@@ -116,8 +120,9 @@ nav a:hover {
 }
 
 .intro-heading {
-  font-size: var(--font-size-intro-header);
-  margin-bottom: 10px;
+  font-size: var(--font-size-intro-header); /* Using the smaller intro header font size */
+  margin-top: 20px;
+  margin-bottom: 5px; /* Adjusted spacing */
 }
 
 .p2 {
@@ -146,29 +151,34 @@ nav a:hover {
 .social-icons a {
   display: inline-block;
   margin-right: 10px;
-  color: var(--icon-color);
+  color: var(--social-icon-color); /* Use the defined social icon color */
   font-size: 1.5em;
   text-decoration: none;
-  transition: transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
+  color: var(--social-icon-color); /* Hover stays blue */
   transform: translateY(-3px);
 }
 
-.button-container button {
-  background-color: var(--font-color2);
-  color: var(--body);
-  border: none;
+.button-container button,
+.download-cv button {
+  background-color: transparent;
+  color: var(--icon-color);
+  border: 1px solid var(--icon-color);
   padding: 10px 20px;
   font-size: var(--font-size);
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  text-decoration: none; /* For potential <a> tags if you change them */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.button-container button:hover {
-  background-color: #88ff00;
+.button-container button:hover,
+.download-cv button:hover {
+  background-color: var(--icon-color);
+  color: var(--body);
 }
 
 /* Skills Section */
@@ -349,14 +359,15 @@ nav a:hover {
 
 .education-images {
   display: flex;
-  gap: 10px;
-  max-width: 500px;
+  gap: 20px; /* Increased gap for better spacing */
+  max-width: 700px; /* Adjusted max width for three images */
   width: 100%;
   justify-content: center;
+  margin-bottom: 20px; /* Add some margin below the images */
 }
 
 .education-images img {
-  max-width: 150px;
+  max-width: 200px; /* Set a reasonable max width for each image */
   height: auto;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -500,7 +511,7 @@ nav a:hover {
   font-size: 1.8em;
   color: var(--font-color2);
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .contact-card p {
@@ -527,14 +538,16 @@ nav a:hover {
   display: inline-block;
   padding: 10px 20px;
   text-decoration: none;
-  color: var(--body);
-  background-color: var(--font-color2);
+  color: var(--icon-color); /* Use icon-color for border text */
+  border: 1px solid var(--icon-color); /* Solid border */
+  background-color: transparent; /* No background */
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact-button:hover {
-  background-color: #88ff00;
+  background-color: var(--icon-color);
+  color: var(--body);
 }
 
 .contact-right h2 {
@@ -553,10 +566,11 @@ nav a:hover {
   gap: 15px;
 }
 
-.contact-form input,
+.contact-form input[type="text"],
+.contact-form input[type="email"],
 .contact-form textarea {
   padding: 10px;
-  border: 1px solid #444;
+  border: 1px solid #555;
   border-radius: 5px;
   background-color: #333;
   color: var(--font-color);
@@ -568,28 +582,28 @@ nav a:hover {
   min-height: 100px;
 }
 
-.submit-button {
-  background-color: var(--font-color2);
+.contact-form .submit-button {
+  background-color: var(--icon-color);
   color: var(--body);
   border: none;
-  padding: 12px 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
   font-size: var(--font-size);
   cursor: pointer;
-  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
-.submit-button:hover {
-  background-color: #88ff00;
+.contact-form .submit-button:hover {
+  background-color: #a6ff00; /* Slightly brighter hover color */
 }
 
-/* Responsive Design */
+scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px); /* Example: start a bit lower */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
-/* For 1440px width */
-@media (max-width: 1440px) {
-  #main-content {
-      padding: 15px;
-  }
-
-  nav a {
-      margin: 0 10px
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
