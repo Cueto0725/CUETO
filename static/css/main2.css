@@ -1,0 +1,442 @@
+/* General body styling */
+:root {
+    --body: #000000;
+    --header-font-color: #ffffff;
+    --font-color: #ffffff;
+    --font-color2: #a6ff00;
+    --cinzel-font: 'Cinzel', sans-serif;
+    --padding-default: 1rem;
+    --container-pg-skills:  #181818;
+    --container-pg-education: #181818;
+    --container-pg-school: #414141;
+    --container-project:  #181818;
+    --font-size: 15px;
+    --font-size-intro-header: 20px;
+    --font-size-fresh: 26px;
+    --font-weight-nrm: normal; 
+    --font-weight-educ:normal;
+    --font-weight-skills:normal;
+    --font-navbar: 14px;
+    --icon-color: #a6ff00;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--body);
+    color: var(--header-font-color)
+}
+  
+.home-section-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Left (h3), Center (div with h1 & p), Right (empty) */
+    align-items: center; /* Vertically align items in the grid row */
+    gap: 20px; /* Optional: Adjust space between the main elements */
+    margin-top: 50px;
+    font-family: var(--cinzel-font);
+}
+  
+.home-section-container > div {
+    text-align: center; /* Center the content within the middle div */
+    margin-right: 40%
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 5px; /* Add the 5px gap below the title */
+}
+
+.quote {
+    color: var(--icon-color);
+    font-size: 13px;
+    text-align: center;
+    margin-top: 0; /* Remove default top margin */
+}
+
+h3 {
+    font-size: 20px;
+    font-family: var(--cinzel-font);
+    font-weight: bold;
+    margin-left: 250px;
+    margin-bottom: 100px;
+    color: rgb(253, 253, 253);
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5), -2px -2px 5px rgba(255, 255, 255, 0.3);
+}
+
+.left-texts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between elements */
+    align-items: flex-start;
+    padding: 5px;
+    max-width: 90%; /* Limit container width */
+    gap: 15px; /* Adjust gap between text elements */
+    position: relative; /* Needed for absolute positioning of social icons container */
+    min-height: 300px; /* Adjust this value based on the height of your text content */
+}
+
+.three-rows {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: start; /* Important: allow items to align left */
+    padding: 0 10px;
+    margin-left: 15%;
+}
+
+/* Heading */
+.intro-heading {
+    font-size: var(--font-size-intro-header);
+    color: var(--header-font-color);
+    font-family: var(--cinzel-font);
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Image */
+.right-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(138, 122, 122, 0.3);
+    border: 4px solid #fff;
+    animation: glow 2s infinite alternate;
+    margin-left: 50px;
+}
+
+.p2.typing-effect {
+    font-family: var(--cinzel-font);
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--font-color2);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    width: 0;
+    animation: typing 5s steps(33, end) 1s forwards, blink 0.75s step-end 6s; /* Added 6s delay to blink */
+    padding-right: 5px;
+    margin: 0;
+}
+
+/* Subheading */
+.fresh {
+    text-indent: 20px;
+    font-family: 'Sen', sans-serif;
+    font-size: var(--font-size-fresh);
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+/* Paragraph */
+.definition1 {
+    font-family: var(--cinzel-font);
+    text-align: justify;
+    text-indent: 60px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Highlighted Span */
+.computer-engineering {
+    color: #007BFF;
+    font-size: 26px;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(3, 3, 3, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 30px rgb(67, 67, 67);
+    }
+}
+
+nav {
+    position: fixed;                /* Make it stay at the top on scroll */
+    top: 0;
+    right: 0;
+    width: 100%;                     /* Full width to cover top area */
+    z-index: 9999;                   /* Ensure it stays above all content */
+    background-color: rgba(0, 0, 0, 0.7);  /* Optional: add semi-transparent bg for readability */
+    font-size: var(--font-navbar);
+    font-family: var(--cinzel-font);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 20px;
+    font-weight: var(--font-navbar);  /* Fixed the missing semicolon here */
+    margin: 0;
+    margin-right: 50px;              /* Remove margin so it sticks properly */
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;          /* Optional: for smooth color change */
+}
+
+nav a:hover {
+    color: #95d500de;                /* Change text color on hover */
+    /* Or add underline instead: text-decoration: underline; */
+}
+
+#project {
+    background-color: var(--body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-height: 100%;
+}
+
+/* Title style (same as .unified-education-title) */
+.unified-project-title {
+    text-align: center;
+    font-family: var(--cinzel-font);
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: var(--font-weight-educ);
+    margin-bottom: 5px;
+}
+
+/* Project wrapper (matches .education-section-wrapper) */
+.project-section-wrapper {
+    display: flex;
+    gap: 30px;
+    background-color: var(--container-project);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Left: Text */
+.project-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 30px;
+}
+
+/* Project title */
+.project-title {
+    font-size: 1.5rem;
+    font-family: var(--cinzel-font);
+    font-weight: var(--font-weight-educ);
+    color: #ffffff;
+    text-align: center;
+    margin-right: 10%
+}
+
+/* Project description */
+.project-description {
+    font-size: var(--font-size);
+    font-family: var(--cinzel-font);
+    line-height: 1.6;
+    text-align: justify;
+    text-indent: 30px;
+    color: var(--font-color);
+}
+
+/* Right: Image container (same size ratio and position as desired) */
+.project-image-container .project-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: auto;
+    object-fit: fill;
+}
+
+.project-image:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* New Navbar style for project section */
+.navbar-project {
+    position: absolute;          /* Position it relative to the section */
+    top: -40px;                  /* Move it slightly above the project content */
+    left: 0;                     /* Align it to the left side of the container */
+    width: 100%;                 /* Full width */
+    padding: 10px 20px;          /* Padding around the links */
+    background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+    font-size: var(--font-navbar); 
+    font-family: var(--cinzel-font);
+    display: flex;
+    justify-content: flex-start; /* Align the links to the left */
+    gap: 20px;
+    z-index: 9999;               /* Make sure it stays above content */
+}
+
+/* Style for the project navigation links */
+.navbar-link {
+    font-family: var(--cinzel-font);  /* Apply the Cinzel font */
+    font-weight: normal;              /* Set the font weight to normal */
+    text-decoration: underline;       /* Always display the underline */
+    color: white;                     /* Set the text color to white */
+    text-decoration-color: var(--icon-color); /* Set the underline color to the icon color */
+    transition: color 0.3s, text-decoration-color 0.3s; /* Smooth color transition on hover */
+    margin-left: 10px;
+}
+
+/* Hover effect for links (only change the color of the text) */
+.navbar-link:hover {
+    color: #95d500de;  /* Change the text color on hover */
+    text-decoration-color: #95d500de; /* Change the underline color to match hover text color */
+}
+
+#education {
+    background-color: var(--body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 80vh;
+}
+
+.unified-education-title {
+    text-align: center;
+    font-family: var(--cinzel-font);
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: var(--font-weight-educ);
+    margin-bottom: 5px;
+}
+
+.education-section-wrapper {
+    display: flex;
+    gap: 30px;
+    background-color: var(--container-pg-education);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1100px; /* Adjust as needed (e.g., 1000px, 900px) */
+    margin: 0 auto;     /* Center it horizontally */
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* New wrapper for images and description together */
+.education-images-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between images and description */
+    flex: 1; /* To ensure it takes available space */
+    align-items: center;
+}
+
+/* Left side: images in a row */
+.education-images {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.education-images img {
+    width: 140px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 50px;
+}
+
+.education-description {
+    font-size: var(--font-size);
+    max-width: 100%;
+    text-align: justify; /* Justified text */
+    line-height: 1.6;
+    text-indent: 15px;
+    margin-left: 30px;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width of parent */
+    gap: 10px;
+    flex: 1;
+    align-items: stretch; /* Make all children take full width equally */
+}
+
+.education-item {
+    background-color: var(--container-pg-school);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%
+
+
+page-content {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+}
+
+
+/* Keyframes for typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 27.5ch; /* Adjust this based on the full length of the name */
+    }
+}
+
+/* Cursor blinking animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Scroll Reveal Effect */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    font-weight: normal; /* Ensuring the font weight remains normal */
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    font-weight: normal; /* Ensure the font weight is still normal when active */
+}
