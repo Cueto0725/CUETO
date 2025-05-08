@@ -40,13 +40,42 @@
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
   }
+
   
   .email-icon:hover::after {
     opacity: 1;
     visibility: visible;
   }
 
-  
+  .tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: auto;
+    background-color: #000000;
+    color: #a6ff00;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 150%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
  
   .download-cv button {
     padding: 10px 20px;
