@@ -1,4 +1,3 @@
-
 page-content {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
@@ -35,4 +34,18 @@ page-content {
     50% {
         border-color: transparent;
     }
+}
+
+/* Scroll Reveal Effect */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    font-weight: normal; /* Ensuring the font weight remains normal */
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    font-weight: normal; /* Ensure the font weight is still normal when active */
 }

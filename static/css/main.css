@@ -4,6 +4,8 @@
 @import url('../css/navbar.css');
 @import url('../css/education.css');
 @import url('../css/effects.css');
+@import url('../css/project.css');
+@import url('../css/media.css');
 
 
 /* General body styling */
@@ -11,14 +13,22 @@
     --body: #000000;
     --header-font-color: #ffffff;
     --font-color: #ffffff;
+    --font-color2: #a6ff00;
     --cinzel-font: 'Cinzel', sans-serif;
     --padding-default: 1rem;
-    --container-pg-skills:  #1f1f1f;;
+    --container-pg-skills:  #181818;
+    --container-pg-education: #181818;
+    --container-pg-school: #414141;
+    --container-project:  #181818;
     --font-size: 15px;
     --font-size-intro-header: 20px;
-    -font-weight-nrm: normal; 
+    --font-size-fresh: 26px;
+    --font-weight-nrm: normal; 
+    --font-weight-educ:normal;
+    --font-weight-skills:normal;
     --font-navbar: 14px;
     --icon-color: #a6ff00;
+    
   }
   
   body {
@@ -26,6 +36,7 @@
     padding: 0;
     background-color: var(--body);
     color: var(--header-font-color)
+    
   }
 
   .home-section-container {
@@ -34,6 +45,7 @@
     align-items: center; /* Vertically align items in the grid row */
     gap: 20px; /* Optional: Adjust space between the main elements */
     margin-top: 50px;
+    font-family: var(--cinzel-font);
   }
   
   .home-section-container > div {
@@ -57,6 +69,7 @@
   
   h3 {
     font-size: 20px;
+    font-family: var(--cinzel-font);
     font-weight: bold;
     margin-left: 250px;
     margin-bottom: 100px;
@@ -92,6 +105,7 @@
 .intro-heading {
     font-size: var(--font-size-intro-header);
     color: var(--header-font-color);
+    font-family: var(--cinzel-font);
     font-weight: bold;
     margin: 0;
 }
@@ -110,9 +124,10 @@
 }
 
 .p2.typing-effect {
+    font-family: var(--cinzel-font);
     font-size: 30px;
     font-weight: bold;
-    color: #a6ff00;
+    color: var(--font-color2);
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid white;
@@ -128,7 +143,7 @@
 .fresh {
     text-indent: 20px;
     font-family: 'Sen', sans-serif;
-    font-size: 26px;
+    font-size: var(--font-size-fresh);
     font-weight: bold;
     color: white;
     margin: 0;
@@ -136,7 +151,7 @@
 
 /* Paragraph */
 .definition1 {
-    font-family: var(--main-font);
+    font-family: var(--cinzel-font);
     text-align: justify;
     text-indent: 60px;
     line-height: 1.8;
@@ -160,106 +175,4 @@
     }
 }
 
-
-
-
-
-/*until here */ 
-
-
-.features-list {
-    list-style: none; /* Removes default bullets */
-    padding-left: 20px; /* Ensure list aligns properly */
-    margin-top: 0; /* Prevent unnecessary top spacing */
-}
-
-
-.features-list li {
-    margin-bottom: 10px; /* Adds spacing between items */
-    font-weight:normal; /* Makes the text bolder */
-    color: rgb(225, 225, 225); /* Ensures text is white */
-}
-
-.timeline-project-reveal {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.timeline-project-reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* Project Section Styling */
-.project-container {
-    text-align: left;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-
-#project .project-image {
-    width: 250px;
-    height: 350px;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    margin-top: -40px;
-    display: block;
-    border-radius: 15px;
-
-    /* Visual Enhancements */
-    object-fit: cover;
-    filter: contrast(110%) brightness(105%) saturate(120%);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    image-rendering: -webkit-optimize-contrast;
-
-    /* Animation setup */
-    transition: transform 0.6s ease;
-}
-
-/* Rotation on hover */
-#project .project-image:hover {
-    transform: rotateY(180deg);
-}
-
-
-.project-button {
-    background-color: #000000; /* Solid background color */
-    color: white;
-    padding: 20px 40px; /* Padding for the rectangular shape */
-    text-align: center;
-    text-decoration: none;
-    font-size: 0.8em; /* Larger font size */
-    font-weight: normal; /* Bold text for emphasis */
-    border: 2px solid #000000; /* Border around the button */
-    border-radius: 15px; /* Rounded corners for a rectangle */
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for all effects */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    letter-spacing: 1px; /* Slight letter spacing for style */
-    width: 100%; /* Make button take full width */
-    max-width: 350px; /* Set maximum width for button */
-    margin: 0 auto; /* Center the button horizontally */
-    white-space: normal; /* Allow text to wrap */
-    word-wrap: break-word; /* Break long words if necessary */
-    text-transform: uppercase; /* Optional: Uppercase text for emphasis */
-    line-height: 1.2; /* Spacing between lines */
-    display: block; /* Ensures the button behaves as a block element */
-    margin-left: 50px;
-}
-
-.project-button:hover {
-    background-color: #0f0f0f; /* Lighter shade on hover */
-    color: #fff; /* Keep text color white */
-    border-color: #000000; /* Change border color on hover */
-    transform: translateY(-3px); /* Lift effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-}
-
-.project-button:active {
-    transform: translateY(1px); /* Slight press effect when clicked */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
-}
 

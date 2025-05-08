@@ -1,271 +1,120 @@
 #education {
-    padding: 50px 20px;
-    background-color: #000000; /* Slightly lighter dark background for contrast */
+    background-color: var(--body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 80vh;
 }
 
-/* Condition for adjusting only the Education section title */
-.section-title.education-title-adjust {
-    /* Add your custom adjustments here */
-    text-align: left; /* Example: Align to the left */
-    margin-left: 100px; /* Example: Adjust left margin */
-    font-size: 2em; /* Example: Change font size */
-    color: #ffffff; /* Example: Change color */
-    margin-bottom: 10px; /* Example: Adjust bottom margin */
-    margin-top: 60px;
-    font-weight: normal;
-    
-}
-
-#work {
-    padding: 50px 20px;
-    background-color: #000000; /* Slightly lighter dark background for contrast */
-}
-
-/* Condition for adjusting only the Education section title */
-.section-title.work-title-adjust {
-    /* Add your custom adjustments here */
-    text-align: left; /* Example: Align to the left */
-    margin-left: 100px; /* Example: Adjust left margin */
-    font-size: 2em; /* Example: Change font size */
-    color: #ffffff; /* Example: Change color */
-    margin-bottom: 10px; /* Example: Adjust bottom margin */
-    margin-top: 60px;
-    font-weight: normal;
- 
-}
-
-#project {
-    padding: 50px 20px;
-    background-color: #000000; /* Slightly lighter dark background for contrast */
-}
-
-/* Condition for adjusting only the Education section title */
-.section-title.project-title-adjust {
-    /* Add your custom adjustments here */
-    text-align: left; /* Example: Align to the left */
-    margin-left: 100px; /* Example: Adjust left margin */
-    font-size: 2em; /* Example: Change font size */
-    color: #ffffff; /* Example: Change color */
-    margin-bottom: 10px; /* Example: Adjust bottom margin */
-    margin-top: 60px;
-    font-weight: normal;
- 
-}
-
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 50px auto;
-  
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background-color: #444;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-    width: 50%;
-}
-
-.timeline-item:nth-child(odd) {
-    left: 0;
-    padding-right: 30px;
-    text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
-    padding-left: 30px;
-}
-
-.timeline-icon {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #7c7c7c;
-    border-radius: 50%;
-    top: 10px;
-    z-index: 1;
-}
-
-.timeline-item:nth-child(odd) .timeline-icon {
-    right: -10px;
-}
-
-.timeline-item:nth-child(even) .timeline-icon {
-    left: -10px;
-}
-
-.timeline-content {
-    background-color: #212121;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-.timeline-item:nth-child(odd) .timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    right: -10px;
-    border-style: solid;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #282828;
-}
-
-.timeline-item:nth-child(even) .timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: -10px;
-    border-style: solid;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #282828 transparent transparent;
-}
-
-.timeline-content h3 {
-    margin: 0 0 5px;
-    font-size: 1.3em;
-    color: #ffffff;
-    text-shadow: none; /* remove 3d effect */
-    margin-left: 0; /* remove left margin from previous styles */
-    margin-bottom: 0px; /* Adjust spacing */
-
-}
-
-.timeline-date {
-    display: block;
-    font-size: 0.9em;
-    color: #a0a0a0;
-    margin-bottom: 0px;
-}
-
-.timeline-date1 {
-    display: block;
-    font-size: 0.9em;
-    color: #a0a0a0;
-    margin-bottom: 0;
-    text-align:left;
-}
-
-.info1{
-    /* Add your custom styles here */
-    text-align: left;
-}
-
-.info2 {
-    text-align: left; /* Example: Align to the left */
-}
-
-.timeline-content p {
-    font-size: 1em;
-    color: #b4ff05;
-    margin: 0;
-    
-}
-
-.timeline-right {
-    position: relative;
-    max-width: 800px;
-    margin: 50px auto;
-}
-
-.timeline-right::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background-color: #444;
-    top: 0;
-    bottom: 0;
-    left: 0; /* Line positioned at the left */
-    margin-left: -1px;
-}
-
-.timeline-right-item {
-    position: relative;
-    margin-bottom: 40px;
-    width: 100%; /* Full width for better positioning */
-    padding-left: 50px; /* Space for the line and icon */
-}
-
-.timeline-right-icon {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #7c7c7c;
-    border-radius: 50%;
-    top: 10px;
-    left: -10px; /* Icon positioned on the left */
-    z-index: 1;
-}
-
-.timeline-right-content {
-    background-color: #212121;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-    margin-left: -10px; /* Shift content to the right */
-}
-
-.timeline-right-content::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: -10px;
-    border-style: solid;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #282828 transparent transparent;
-}
-
-.timeline-right-content h3 {
-    margin: 0 0 5px;
-    font-size: 1.3em;
-    color: #ffffff;
-    text-shadow: none;
-    text-align: center; /* Keep text centered */
-    padding-left: 50px; /* Indent effect */
-    display: inline-block; /* Allows text-indent while keeping center alignment */
-    max-width: 80%; /* Prevents text from stretching too far */
-}
-
-
-.timeline-right-date {
-    display: block;
-    font-size: 0.9em;
-    color: #a0a0a0;
-    margin-bottom: 0;
+.unified-education-title {
     text-align: center;
+    font-family: var(--cinzel-font);
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: var(--font-weight-educ);
     margin-bottom: 5px;
-    font-weight: bold;
-    
 }
 
-.info-right {
-    text-align: left;
-    text-indent: 50px;
-    color: #b4ff05;
+.education-section-wrapper {
+    display: flex;
+    gap: 30px;
+    background-color: var(--container-pg-education);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1100px; /* Adjust as needed (e.g., 1000px, 900px) */
+    margin: 0 auto;     /* Center it horizontally */
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.info-right1 {
-    text-align: left;
-    padding: 5px 20px; /* Reduce top and bottom padding */
-    color: white;
-    margin-bottom: 5px; /* Reduce space between Key Features and the list */
+/* New wrapper for images and description together */
+.education-images-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between images and description */
+    flex: 1; /* To ensure it takes available space */
+    align-items: center;
 }
 
-.timeline-right-content p {
-    font-size: 1em;
-    margin: 0 0 5px 0; /* Reduce bottom margin to minimize spacing */
+/* Left side: images in a row */
+.education-images {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+    margin-left: 30px;
+    margin-top: 20px;
 }
+
+.education-images img {
+    width: 140px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 50px;
+}
+
+.education-description {
+    font-size: var(--font-size);
+    max-width: 100%;
+    text-align: justify; /* Justified text */
+    line-height: 1.6;
+    text-indent: 15px;
+    margin-left: 30px;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width of parent */
+    gap: 10px;
+    flex: 1;
+    align-items: stretch; /* Make all children take full width equally */
+}
+
+.education-item {
+    background-color: var(--container-pg-school);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Force full width within flex container */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+
+.school, .education-date, .education-info {
+    text-align: center; /* Center text in these elements */
+    width: 100%; /* Ensure the text takes up the full width to allow centering */
+}
+
+
+/* Hover effect for zoom and shadow */
+.education-item:hover {
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Shadow effect */
+    z-index: 2; /* Ensure it is on top when hovered */
+}
+
+.school {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-educ);
+    color: #ffffff;
+}
+
+.education-date {
+    font-size: var(--font-size);
+    color: #ffffff;
+}
+
+.education-info {
+    font-size: 1.2rem;
+    color: var(--font-color2);
+}
+
 

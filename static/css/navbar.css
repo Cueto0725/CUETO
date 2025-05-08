@@ -1,10 +1,10 @@
 nav {
-    position: fixed;         /* Make it stay at the top on scroll */
+    position: fixed;                /* Make it stay at the top on scroll */
     top: 0;
     right: 0;
-    width: 100%;             /* Full width to cover top area */
-    z-index: 9999;           /* Ensure it stays above all content */
-    background-color: rgba(0, 0, 0, 0.7); /* Optional: add semi-transparent bg for readability */
+    width: 100%;                     /* Full width to cover top area */
+    z-index: 9999;                   /* Ensure it stays above all content */
+    background-color: rgba(0, 0, 0, 0.7);  /* Optional: add semi-transparent bg for readability */
     font-size: var(--font-navbar);
     font-family: var(--cinzel-font);
     padding: 20px;
@@ -12,18 +12,18 @@ nav {
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 20px;
-    font-weight: var(--font-navbar)
-    margin: 0;   
-    margin-right: 50px;            /* Remove margin so it sticks properly */
+    font-weight: var(--font-navbar);  /* Fixed the missing semicolon here */
+    margin: 0;
+    margin-right: 50px;              /* Remove margin so it sticks properly */
 }
 
 nav a {
     text-decoration: none;
     color: inherit;
-    transition: color 0.3s; /* Optional: for smooth color change */
+    transition: color 0.3s;          /* Optional: for smooth color change */
 }
 
 nav a:hover {
-    color: #95d500de; /* Change text color on hover */
+    color: #95d500de;                /* Change text color on hover */
     /* Or add underline instead: text-decoration: underline; */
 }
