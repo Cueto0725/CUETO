@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cueto Portfolio</title>
-    <link rel="stylesheet" href="/static/css/main.css">
-    <script src="../static/modal.js" defer></script>
+    <link rel="stylesheet" href="../static/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Michroma:wght@400;700&;family=Cinzel:wght@400;700&family=Roboto:wght@400;700&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 <body>
 
@@ -118,13 +119,13 @@
             <h2 class="unified-project-title scroll-reveal">Projects</h2>
         
             <div class="project-section-wrapper scroll-reveal">
-                <!-- Links for the systems and "For More Info" together -->
                 <div class="project-links">
-                    <a href="#cash-invoice" class="navbar-link">Cash Invoice System</a>
-                    <a href="#purchasing-system" class="navbar-link">Purchasing System</a>
-                    <a href="#taps" class="navbar-link">TAPS</a>
-                    <a href="#more-info" class="navbar-link">For More Info</a>
-                    <div class="project-text-content">
+                    <a href="#Thesis" class="navbar-link" data-target="thesis">Thesis</a>
+                    <a href="#cash-invoice" class="navbar-link" data-target="cash-invoice">Cash Invoice System</a>
+                    <a href="#purchasing-system" class="navbar-link" data-target="purchasing-system">Purchasing System</a>
+                    <a href="#taps" class="navbar-link" data-target="taps">TAPS</a>
+        
+                    <div class="project-text-content" id="project-content">
                         <span class="project-title">A Portable Tracking and Safety Device for the Students of Lucsuhin Integrated School</span>
                         <p class="project-description">
                             My thesis project involves developing a portable tracking and safety device integrated with a microcontroller.
@@ -135,54 +136,128 @@
                         </p>
                     </div>
                 </div>
-    
-        
-                <!-- Image container -->
+                
                 <div class="project-image-container">
-                    <img src="../static/images/Project 1.jpg" alt="Project Screenshot" class="project-image" />
+                    <img id="project-image" src="../static/images/Picture2.jpg" alt="Project Screenshot" class="project-image" />
+                </div>
+                
+                
+            </div>
+        </section>
+        
+
+
+
+
+        
+        <section id="education">
+            <h2 class="section-title unified-education-title scroll scroll-reveal">Education</h2>
+
+            <div class="education-section-wrapper scroll-reveal">
+                <div class="education-images-description">
+                    <div class="education-images">
+                        <img src="../static/images/Certificates.jpeg" alt="Certificate" />
+                        <img src="../static/images/Education 2.jpeg" alt="Education 2" />
+                        <img src="../static/images/Education.jpeg" alt="Education" />
+                    </div>
+
+                    <div class="education-description">
+                        As I end my college journey in the 1st semester, I represented our thesis paper at the college fair. Afterward, our research earned 3 certificates: 2nd place in Overall Exhibit, 3rd place in Best in Implementation, and 3rd place in Best in Communication.
+                    </div>
+                </div>
+
+                    <div class="education-container">
+                        <div class="education-item scroll-reveal">
+                            <span class="school">STI Lipa Colleges</span>
+                            <span class="education-date">2021 - 2025</span>
+                            <p class="education-info">Bachelor of Science in Computer Engineering</p>
+                        </div>
+                        <div class="education-item scroll-reveal">
+                            <span class="school">University of Batangas</span>
+                            <span class="education-date">2018 - 2020</span>
+                            <p class="education-info">Bachelor of Science in Architecture</p>
+                        </div>
+                        <div class="education-item scroll-reveal">
+                            <span class="school">University of Batangas</span>
+                            <span class="education-date">2014 - 2018</span>
+                            <p class="education-info">Junior High School</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="work">
+            <h2 class="section-title unified-work-title scroll-reveal">Work Experience</h2>
+            <div class="work-section-wrapper scroll-reveal">
+                <div class="work-left-container">
+                    <div class="work-item scroll-reveal">
+                        <span class="company">Golden Achers Corporation - Mcdonalds</span>
+                        <span class="work-date">February 2022 - June 2023</span>
+                        <p class="work-info">Service crew - Working Student</p>
+                    </div>
+                    <div class="work-item scroll-reveal">
+                        <span class="company">CREOTEC PHILIPPINES INC.</span>
+                        <span class="work-date">January 2019</span>
+                        <p class="work-info">IMMERSION - Production</p>
+                    </div>
+                </div>
+                <div class="work-right-container">
+                    <div class="work-item scroll-reveal">
+                        <span class="company">Project Fit PH</span>
+                        <span class="work-date">January 2024 - December 2024</span>
+                        <p class="work-info">Health Data Analyst - Virtual Assistant</p>
+                    </div>
+                    <div class="work-item scroll-reveal">
+                        <span class="company">TAISEI ELECTRONICS (PHILIPPINES) INC.</span>
+                        <span class="work-date">January 2025 - Present</span>
+                        <p class="work-info">INTERNSHIP - Data Developer Support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="contact-container">
+                <div class="contact-left-container">
+                    <section class="contact-left">
+                        <div class="contact-card">
+                            <div class="profile-image">
+                                <img src="../static/images/portfolio-image.jpg" alt="Profile Picture" />
+                            </div>
+                            <span class="animated-name">Jean Claude Leonard C. Cueto</span>
+                            <p>Full Stack Web Developer</p>
+                            <ul>
+                                <li>2ND Place Thesis-Overall Exhibit</li>
+                                <li>Best in Implementation</li>
+                                <li>Best in Communication</li>
+                                <li>AWS Badge Academy Cloud Foundations</li>
+                            </ul>
+                            <div class="contact-buttons">
+                                <a href="mailto:youremail@example.com" class="contact-button">Gmail</a>
+                                <a href="https://www.linkedin.com" class="contact-button">LinkedIn</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+        
+                <div class="contact-right-container">
+                    <section class="contact-right">
+                        <h2>Let's Collaborate</h2>
+                        <p>Want to collaborate? Want to know me more? Just send a message, and we will talk about it.</p>
+                        <form class="contact-form">
+                            <input type="text" placeholder="Name" />
+                            <input type="email" placeholder="Email" />
+                            <textarea placeholder="Message"></textarea>
+                            <button type="submit" class="submit-button">Submit</button>
+                        </form>
+                    </section>
                 </div>
             </div>
         </section>
         
 
-        <section id="education">
-            <div class="education-wrapper">
-              <h2 class="section-title unified-education-title scroll scroll-reveal">Education</h2>
-          
-              <div class="education-content-container scroll-reveal">
-                <!-- Images in a row, centered -->
-                <div class="education-images">
-                  <img src="../static/images/Certificates.jpeg" alt="Certificate" />
-                  <img src="../static/images/Education 2.jpeg" alt="Education 2" />
-                  <img src="../static/images/Education.jpeg" alt="Education" />
-                </div>
-          
-                <!-- Description -->
-                <p class="education-description">
-                  As I end my college journey in the 1st semester, I represented our thesis paper at the college fair. Afterward, our research earned 3 certificates: 2nd place in Overall Exhibit, 3rd place in Best in Implementation, and 3rd place in Best in Communication.
-                </p>
-          
-                <!-- Education list -->
-                <div class="education-container">
-                  <div class="education-item scroll-reveal">
-                    <span class="school">STI Lipa Colleges</span>
-                    <span class="education-date">2021 - 2025</span>
-                    <p class="education-info">Bachelor of Science in Computer Engineering</p>
-                  </div>
-                  <div class="education-item scroll-reveal">
-                    <span class="school">University of Batangas</span>
-                    <span class="education-date">2018 - 2020</span>
-                    <p class="education-info">Bachelor of Science in Architecture</p>
-                  </div>
-                  <div class="education-item scroll-reveal">
-                    <span class="school">University of Batangas</span>
-                    <span class="education-date">2014 - 2018</span>
-                    <p class="education-info">Junior High School</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-    </div>
+        <script src="../static/js/modal.js" defer></script>
+        <script src="../static/js/project.js" defer></script>
 </body>
 </html>
