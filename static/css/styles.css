@@ -557,7 +557,6 @@ h3 {
     margin-left: 5px;
 }
 
-
 .email-icon:hover::after {
     opacity: 1;
     visibility: visible;
@@ -629,14 +628,20 @@ h3 {
     align-items: center;
     box-sizing: border-box;
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    text-decoration: underline;
 }
 
+#main-navigation ul {
+    transition: opacity 0.3s ease;
+}
+
+
 /* Optional: Site Title/Logo Area */
-#site-header .site-title { /* Example: <a href="#" class="site-title">Your Name</a> */
+#site-header .site-title { 
     font-size: 1.5rem;
     color: var(--navbar-text-color);
     text-decoration: none;
-    margin-right: auto; /* Pushes navigation links to the right */
+    margin-right: auto; 
     font-weight: bold;
 }
 
@@ -644,7 +649,7 @@ h3 {
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: flex-end; /* Aligns the UL to the right if no site-title or site-title is part of it */
+    justify-content: flex-end; 
 }
 
 
@@ -683,7 +688,7 @@ h3 {
     font-weight: bold;
 }
 
-/* Hamburger Menu Icon (Initially hidden on larger screens) */
+/* Hamburger Menu Icon hide on larger screens */
 .nav-toggle {
     display: none;
     background: none;
@@ -695,7 +700,7 @@ h3 {
     margin-left: auto;
     margin-right: 20px;
 }
-/* Basic styling for a simple 3-bar hamburger icon (if not using SVG/Font Icon) */
+/* HAMBURGER MENU */
 .nav-toggle .icon-bar {
     display: block;
     width: 22px;
@@ -707,7 +712,7 @@ h3 {
 .nav-toggle:hover .icon-bar {
     background-color: var(--navbar-link-hover-text-color);
 }
-/* --- End of Site Header and Main Navigation --- */
+
 
 
 /* Project Section */
@@ -717,7 +722,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* padding-top: 60px; /* Removed as body has padding-top for fixed navbar. Add back if specific extra spacing is needed */
+
 }
 
 .unified-project-title {
@@ -784,7 +789,7 @@ h3 {
 .project-description {
     font-size: var(--font-size);
     font-family:  var(--TR-font);
-    font-weight: var(--font-weight-nrm)
+    font-weight: var(--font-weight-nrm);
     line-height: 1.6;
     text-align: justify;
     text-indent: 30px;
@@ -960,7 +965,6 @@ h3 {
     align-items: center;
     justify-content: flex-start;
     min-height: 60vh;
-    /* padding-top: 60px; /* Removed as body has padding-top for fixed navbar. Add back if specific extra spacing is needed */
     padding-bottom: 50px;
 }
 
@@ -1038,13 +1042,13 @@ h3 {
 @media (max-width: 768px) {
     #site-header {
         padding: 0 calc(var(--padding-default) / 2);
-        justify-content: space-between; /* To position site title (if any) and nav-toggle */
+        justify-content: space-between;
     }
 
-    /* If you have a site title, ensure it's visible and sized appropriately */
+ 
     #site-header .site-title {
-        font-size: 1.2rem; /* Adjust mobile site title size */
-        margin-right: 10px; /* Space before toggle if title is present */
+        font-size: 1.2rem; 
+        margin-right: 10px; 
     }
 
     #main-navigation ul {
@@ -1052,7 +1056,7 @@ h3 {
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: var(--navbar-height); /* Position below the header */
+        top: var(--navbar-height); 
         left: 0;
         width: 100%;
         background-color: var(--navbar-background);
@@ -1061,7 +1065,7 @@ h3 {
         border-top: 1px solid rgba(255,255,255,0.1);
     }
 
-    #main-navigation ul.nav-active { /* This class is toggled by JavaScript */
+    #main-navigation ul.nav-active { 
         display: flex;
     }
 
@@ -1083,16 +1087,16 @@ h3 {
     #main-navigation li a:hover,
     #main-navigation li a:focus,
     #main-navigation li a.active {
-        transform: none; /* Disable translateY for mobile dropdown */
+        transform: none; 
     }
 
     .nav-toggle {
-        display: block; /* Show the hamburger icon */
+        display: block;
     }
 
-    /* Your existing responsive styles */
+    /* responsive styles */
     .three-rows {
-        display: flex; /* Overriding grid to stack for simpler mobile */
+        display: flex;
         flex-direction: column;
         align-items: center;
         margin-left: 0;
@@ -1102,25 +1106,25 @@ h3 {
         margin-right: 0;
     }
     
-    h3 { /* Adjust main h3 on small screens */
+    h3 { 
         margin-left: 0;
         text-align: center;
         margin-bottom: 30px;
     }
 
-    .right-image { /* Adjusted from .right-image-container img to match your class */
+    .right-image { 
         width: 80%; 
         max-width: 250px;
         height: auto;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 20px; /* Add some space if stacked */
+        margin-top: 20px;
     }
 
     .home-section-container {
-        grid-template-columns: 1fr; /* Stack grid items */
+        grid-template-columns: 1fr;
         text-align: center;
-        /* margin-top: 20px; /* Body padding handles navbar offset */
+
     }
     
     .contact-container {
@@ -1136,11 +1140,11 @@ h3 {
     .work-section-wrapper {
         flex-direction: column;
         align-items: center;
-        width: 95%; /* Slightly wider for mobile content */
+        width: 95%;
         padding: 20px;
     }
     .work-left-container, .work-right-container {
-        width: 100%; /* Make work columns stack and take full width */
+        width: 100%;
     }
     .skills-row {
         flex-direction: column;
@@ -1157,12 +1161,12 @@ h3 {
         width: 95%; /* Slightly wider */
         padding: 15px;
     }
-    .project-links, .project-image-container { /* Ensure they stack correctly */
-        flex-basis: auto; /* Reset flex-basis for stacking */
+    .project-links, .project-image-container { 
+        flex-basis: auto; 
         width: 100%;
     }
     .project-image-container .project-image {
-        max-width: 250px; /* Adjust image size for mobile */
+        max-width: 250px; 
     }
     .project-text-content {
         padding: 10px;
@@ -1173,9 +1177,9 @@ h3 {
         justify-content: center;
     }
 
-    /* Adjust padding-top for sections if body padding isn't enough or for specific spacing */
+    
     #education, #project, #work {
-        padding-top: 20px; /* Example: reduce if body padding is mostly sufficient */
+        padding-top: 20px;
     }
 
 }
