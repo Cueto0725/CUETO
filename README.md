@@ -3,7 +3,6 @@
 I’m **Jean Claude Leonard C. Cueto**, a fresh graduate in **Computer Engineering**.
 
 This repository showcases my personal and academic projects, skills, and work experience.
-Click the link below to view
 [Visit My Portfolio Website](https://cueto0725.github.io/Portfolio/)
 
 ## Overview
