@@ -4,7 +4,8 @@ I’m **Jean Claude Leonard C. Cueto**, a fresh graduate in **Computer Engineeri
 
 This repository showcases my personal and academic projects, skills, and work experience.
 Click the link below to view
-cueto0725.github.io/Portfolio/
+[Visit My Portfolio Website](https://cueto0725.github.io/Portfolio/)
+
 ## Overview
 
 * **Projects:** Includes projects I developed during college, such as my thesis project about a real-time student safety device.
