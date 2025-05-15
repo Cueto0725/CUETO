@@ -231,6 +231,8 @@ h3 {
 
 .education-images {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 10px;
     flex-shrink: 0;
     margin-left: 30px;
@@ -253,6 +255,7 @@ h3 {
     line-height: 1.6;
     text-indent: 15px;
     margin-left: 30px;
+ 
 }
 
 .education-container {
@@ -307,6 +310,55 @@ h3 {
     color: var(--font-color2);
 }
 
+@media (max-width: 600px) {
+    .education-section-wrapper {
+      flex-direction: column;
+    }
+  
+    .education-images-description {
+      order: 1;
+    }
+  
+    .education-container {
+      order: 2;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 768px) {
+    .education-section-wrapper {
+      flex-direction: column;
+    }
+  
+    .education-images-description {
+      order: 1;
+    }
+  
+    .education-container {
+      order: 2;
+    }
+  }
+
+  
+  @media (max-width: 600px) {
+    .education-description {
+      font-size: 0.9rem;
+      margin-left: 15px;
+      padding: 0 15px;
+      text-indent: 15px;
+      line-height: 1.5;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 768px) {
+    .education-description {
+      font-size: 1rem;
+      margin-left: 15px;
+      padding: 0 15px;
+      text-indent: 15px;
+      line-height: 1.6;
+    }
+  }
+  
 
 /* Page Content Fade-In */
 .page-content {

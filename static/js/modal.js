@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const workSection = document.getElementById("work");
   const projectSection = document.getElementById("project");
   const aboutSection = document.getElementById("about");
-  const homeSection = document.getElementById("Home"); // Get the Home section
-  const navLinks = document.querySelectorAll("nav a"); // Select all navigation links
-  const offset = 80; // You can change this default offset
+  const homeSection = document.getElementById("Home");
+  const navLinks = document.querySelectorAll("nav a");
+  const offset = 80;
 
   function revealOnScroll() {
     scrollRevealElements.forEach((element) => {
@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Initial scroll reveal trigger
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
 
@@ -58,13 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (targetElement) {
         let scrollToPosition = targetElement.offsetTop;
         if (targetId === "#Home") {
-          scrollToPosition = 0; // Scroll to the very top for Home
+          scrollToPosition = 0;
         } else {
-          scrollToPosition -= offset; // Apply offset for other sections
+          scrollToPosition -= offset;
         }
         window.scrollTo({ top: scrollToPosition, behavior: "smooth" });
 
-        // Remove focus from the clicked link to potentially remove some default hover/focus styles
         this.blur();
       }
     });
